@@ -4,6 +4,5 @@ public class PickUpObject : IInteractable
     {
         onPickup?.Invoke(this);
         //player.Pickup(m_part);
-        Destroy(gameObject);
     }
 }
