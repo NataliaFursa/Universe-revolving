@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Upgrate : MonoBehaviour
 {
-    static private int m_MSCost = 0;
+    public UpgrateData upgrateData;
+    public int m_MSCost = 0;
     public int MSMaxlvl = 4;
     public int MSCost { get => 100+ (150*m_MSCost); }
     public void MSUpdateButton()
@@ -21,7 +22,7 @@ public class Upgrate : MonoBehaviour
         else return;
     }
 
-    static private int m_HPCost = 0;
+    public int m_HPCost = 0;
     public int HPMaxlvl = 4;
     public int HPCost { get => 100+ (100*m_HPCost); }
     public void HPUpdateButton()
@@ -40,7 +41,7 @@ public class Upgrate : MonoBehaviour
         else return;
     }
 
-    static private int m_BMCost = 0;
+    public int m_BMCost = 0;
     public int BMMaxlvl = 3;
     public int BMCost { get => 250+ (250*m_BMCost); }
     public void BMUpdateButton()
@@ -57,5 +58,27 @@ public class Upgrate : MonoBehaviour
     {
         if (Meta.baseMoney < 600) Meta.baseMoney += 150;
         else return;
+    }
+    public void Load()
+    {
+        UpgrateData Load = JsonManager.UpgrateLoadToJson();
+        m_MSCost =Load.MSCost;
+        m_HPCost =Load.HPCost;
+        m_BMCost =Load.BMCost;
+    }
+    public void Save()
+    {
+        upgrateData = new UpgrateData();
+        upgrateData.MSCost = m_MSCost;
+        upgrateData.HPCost = m_HPCost;
+        upgrateData.BMCost = m_BMCost;
+        JsonManager.UpgrateSaveToJson(upgrateData);
+    }
+    public class UpgrateData
+    {
+        public int MSCost;
+        public int HPCost;
+        public int BMCost;
+
     }
 }

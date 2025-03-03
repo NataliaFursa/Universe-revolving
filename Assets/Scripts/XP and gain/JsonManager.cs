@@ -1,28 +1,63 @@
 using System.IO;
 using UnityEngine;
+using static Upgrate;
 
 public static class JsonManager
 {
     public static PlayerData playerData;
     public static PlayerData loadedData;
+    public static UpgrateData j_upgrateData;
+    
+    
     public class PlayerData
     {
-        public int XP = Meta.PlayerXP;
-        public int MS = Meta.baseMS; 
-        public float HP = Meta.baseHP;
-        public int Money = Meta.baseMoney;
+        public int XP;
+        public int MS; 
+        public float HP;
+        public int StartMoney;
 
     }
-    static void SaveToJson(PlayerData data)
+    
+    static void MetaToData(PlayerData data)
     {
-        string json = JsonUtility.ToJson(data, true); // Сериализация в JSON с отступами
+        data.XP = Meta.PlayerXP;
+        data.MS = Meta.baseMS; 
+        data.HP = Meta.baseHP;
+        data.StartMoney = Meta.baseMoney;
+    }
+    static public void UpgrateSaveToJson(UpgrateData upgrateData)
+    {
+        string json = JsonUtility.ToJson(upgrateData, true); // Сериализация в JSON с отступами
+        string path = Path.Combine(Application.persistentDataPath, "upgrateData.json"); // Путь к файлу
+    }
+    static public UpgrateData UpgrateLoadToJson()
+    {
+        string path = Path.Combine(Application.persistentDataPath, "upgrateData.json"); // Путь к файлу
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path); // Чтение JSON строки из файла
+            j_upgrateData = JsonUtility.FromJson<UpgrateData>(json); // Десериализация JSON в объект PlayerData
+            return j_upgrateData;
+        }
+        else
+        {
+            Debug.LogError("Файл не найден: " + path);
+            //Meta.SetDefault();
+            return null;
+        }
+    }
+    static public void SaveToJson()
+    {
+        playerData = new PlayerData();
+        MetaToData(playerData);
+        string json = JsonUtility.ToJson(playerData, true); // Сериализация в JSON с отступами
         string path = Path.Combine(Application.persistentDataPath, "playerData.json"); // Путь к файлу
 
         File.WriteAllText(path, json); // Запись JSON строки в файл
         Debug.Log("Данные сохранены в: " + path);
     }
 
-    static void LoadFromJson()
+    static public void LoadFromJson()
     {
         string path = Path.Combine(Application.persistentDataPath, "playerData.json"); // Путь к файлу
         if (File.Exists(path))
@@ -34,6 +69,7 @@ public static class JsonManager
         else
         {
             Debug.LogError("Файл не найден: " + path);
+            Meta.SetDefault();
         }
     }
 }

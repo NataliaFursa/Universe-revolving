@@ -13,6 +13,13 @@ public static class Meta
         PlayerXP = playerData.XP;
         baseMS = playerData.MS;
         baseHP = playerData.HP;
-        baseMoney = playerData.Money;
+        baseMoney = playerData.StartMoney;
+    }
+    static public void SetDefault()
+    {
+        PlayerXP = 0;
+        baseMS = 8;
+        baseHP = 100;
+        baseMoney = 150;
     }
 }
