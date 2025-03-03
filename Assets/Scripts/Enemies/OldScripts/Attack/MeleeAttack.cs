@@ -13,7 +13,7 @@ public class MeleeAttack : MonoBehaviour
     [SerializeField] protected float damage;
     [SerializeField]protected float attackCooldown = 2f;
 
-    public event Action AgentAttack;
+    //public event Action AgentAttack;
 
     private void Awake()
     {

@@ -8,14 +8,14 @@ public class WeaponCageManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI ammoText;
 
-    [SerializeField] private Weapon m_currentWeapon;
+    private Weapon m_currentWeapon;
+  
 
-    private void Start()
+    public void SetPlayer(Player player)
     {
+        m_currentWeapon = player.weaponManagerValue.weaponValue;
         RefreshBulletInfo(m_currentWeapon);
-    }
-    private void OnEnable()
-    {
+
         if (m_currentWeapon)
         {
             m_currentWeapon.onShoot += OnChangeCage;

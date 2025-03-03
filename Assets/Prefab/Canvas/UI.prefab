@@ -821,7 +821,7 @@ RectTransform:
   m_Father: {fileID: 7357122593274095152}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1227,6 +1227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1420597288155663791}
+  - component: {fileID: 8843550075297135225}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -1254,6 +1255,21 @@ Transform:
   - {fileID: 540531209561404773}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8843550075297135225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510897213038177513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b44385c0a33549509bd0e7276085918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponCageManager: {fileID: 1772050275931953936}
+  skillCooldownDisplay: {fileID: 556674452456014186}
+  healthSlider: {fileID: 2250045456362763575}
 --- !u!1 &1596855078546969882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2241,7 +2257,7 @@ RectTransform:
   m_Father: {fileID: 3402943849437364895}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.632, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2822,6 +2838,7 @@ GameObject:
   - component: {fileID: 6672862798046866062}
   - component: {fileID: 556674452456014186}
   - component: {fileID: 1772050275931953936}
+  - component: {fileID: 2250045456362763575}
   m_Layer: 0
   m_Name: GamePlayState
   m_TagString: Untagged
@@ -2874,10 +2891,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldownColor: {r: 0.3882353, g: 0.3882353, b: 0.3882353, a: 1}
   durationSlider: {fileID: 7672294828476146814}
-  healingSkill: {fileID: 0}
   healingTimerText: {fileID: 501763255037625868}
   healingSkillIcon: {fileID: 8002484762805851370}
-  boostSkill: {fileID: 0}
   boostTimerText: {fileID: 2108901078516329938}
   boostSkillIcon: {fileID: 7643045747535369430}
 --- !u!114 &1772050275931953936
@@ -2893,7 +2908,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammoText: {fileID: 7931466458385840314}
-  m_currentWeapon: {fileID: 0}
+--- !u!114 &2250045456362763575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3439358375410475707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6dfd04500dd48f68e4fb7830107b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 0}
+  hpStat: {fileID: 4191426535754433917}
+  canvas: {fileID: 6013348221511694651}
 --- !u!1 &3513191040373749862
 GameObject:
   m_ObjectHideFlags: 0
@@ -6085,7 +6114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1495389718537344483
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7904,7 +7933,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4898441801952890965
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8790,8 +8819,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4406120318116521888}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.632, y: 0}
-  m_AnchorMax: {x: 0.632, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
