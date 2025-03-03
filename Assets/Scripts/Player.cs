@@ -121,10 +121,10 @@ public class Player : MonoBehaviour
 
     public void ToDefault()
     {
+        m_stats.ToDefault();
         m_weaponManager.ToDefault();
         m_health.ToDefault(m_stats.baseHP);
         m_movement.ToDefault(m_stats.baseMoveSpeed);
-        m_stats.ToDefault(m_stats.startMoney);
     }
     public void RotateTo(Vector3 target)
     {

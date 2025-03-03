@@ -68,14 +68,16 @@ public class UI_Inventory : MonoBehaviour
     }
     private void RefreshInventory()
     {
-        scope = levelController.playerValue.weaponManagerValue.weaponValue.weaponLegoValue.scopeValue;
-        magazine = levelController.playerValue.weaponManagerValue.weaponValue.weaponLegoValue.magazineValue;
-        reciever = levelController.playerValue.weaponManagerValue.weaponValue.weaponLegoValue.receiverValue;
+        scope = levelController?.playerValue?.weaponManagerValue?.weaponValue?.weaponLegoValue?.scopeValue;
+        magazine = levelController?.playerValue?.weaponManagerValue?.weaponValue?.weaponLegoValue?.magazineValue;
+        reciever = levelController?.playerValue?.weaponManagerValue?.weaponValue?.weaponLegoValue?.receiverValue;
 
-        scope_slot.SetItem(scope);
-        magazine_slot.SetItem(magazine);
-        reciever_slot.SetItem(reciever);
-
+        if (scope && magazine && reciever && scope_slot && magazine_slot && reciever_slot)
+        {
+            scope_slot.SetItem(scope);
+            magazine_slot.SetItem(magazine);
+            reciever_slot.SetItem(reciever);
+        }
     }
 
 
