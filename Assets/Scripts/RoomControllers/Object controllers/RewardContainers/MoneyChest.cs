@@ -4,9 +4,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using static PartsDB;
 
-public class StandartChest : RewardContainer
+public class MoneyChest : RewardContainer
 {
-    public PartPickUpObject pickupObject;
     public MoneyPickupObject moneyPickupObject;
     private bool m_allreadiOpen = false;
     public GameObject cube;
@@ -15,11 +14,10 @@ public class StandartChest : RewardContainer
         if (m_allreadiOpen == false)
         {
         if (onOpen != null) onOpen.Invoke();
-        int randItemIndex = Random.Range(0, rewardItemDB.items.Count);
-        PickupDrop(rewardItemDB.items[randItemIndex]);
-        int randomMoneyValue = Random.Range(19, 19);
+        int randomMoneyValue = Random.Range(10, 20);
         MoneyDrop(randomMoneyValue);
         m_allreadiOpen = true;
+        Destroy(cube);
         }
     }
 
@@ -56,13 +54,5 @@ public class StandartChest : RewardContainer
             m_Minicoin.Drop();
             m_Minicoin.SetValue(25);
         }
-    }
-
-    public void PickupDrop(Item item)
-    {
-        //What the actual fuck is this shit🤗
-        PartPickUpObject m_pickup = Instantiate(pickupObject, transform.position, transform.rotation);
-        m_pickup.GetPart(item);
-        m_pickup.Drop();
     }
 }
