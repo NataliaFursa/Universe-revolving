@@ -83,16 +83,27 @@ public class Player : MonoBehaviour
     }
     public void Pickup(IInteractable obj)
     {
-        if(obj is PartPickUpObject)
+        bool availableUse = true;
+        if (obj is IItemWithPrice)
+        {
+            IItemWithPrice item = (IItemWithPrice)obj;
+            availableUse = m_stats.MinusMoney(item.Price);
+        }
+        if (!availableUse) return;
+
+        if (obj is PartPickUpObject)
         {
             var partPickUp = obj as PartPickUpObject;
             m_weaponManager.Pickup(partPickUp.item);
+            Destroy(obj.gameObject);
         }
-        if(obj is HealPickUp)
+        if (obj is HealPickUp)
         {
             var healPickUp = obj as HealPickUp;
             this.m_health.RestoreHealth(healPickUp.healValue);
+            Destroy(obj.gameObject);
         }
+        
     }
 
     public void Warp(Vector3 position)

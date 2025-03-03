@@ -12,19 +12,28 @@ public class LevelController : MonoBehaviour
     [SerializeField] GameObject playerDefaultPrefab;
     [SerializeField] CameraController cameraController;
     [SerializeField] PlayerController playerController;
-    [SerializeField] UIConfigurator uiConfigurator;
+    [SerializeField] ScreenFade screenFade;
 
     MapGenerator mapGenerator;
 
     List<List<Room>> levelMap;
     GameObject activeRoom;
     RoomController activeRoomController;
+    int currentRoomInd = 0;
     int currentLayer = 0;
 
+    private bool start = true;
     public Action<int> onRoomChange;
     public Action onLevelFinish;
+    public Action onRunFinish;
     private void Awake()
     {
+        if (screenFade != null)
+        {
+            screenFade.onFadeOutEnd += LoadNextRoom;
+            screenFade.onFadeInEnd += InitializeRoom;
+        }
+
         if (player == null)
         {
             GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
@@ -47,7 +56,8 @@ public class LevelController : MonoBehaviour
     {
         uiConfigurator.ConfigureWeaponCageManager(player);
         UpdateMap();
-        LoadNextStage(0);
+        InstantLoad();
+        screenFade.StartFadeIn();
     }
 
     public void UpdateMap()
@@ -55,7 +65,7 @@ public class LevelController : MonoBehaviour
         levelMap = mapGenerator.GenerateMapWithGlobalPool();
     }
 
-    private void LoadNextStage(int ind)
+    private void LoadNextRoom()
     {
         ClearPickUps();
         if (activeRoom != null)
@@ -64,7 +74,7 @@ public class LevelController : MonoBehaviour
             Destroy(activeRoom);
         }
 
-        Room newRoom = levelMap[currentLayer][ind];
+        Room newRoom = levelMap[currentLayer][currentRoomInd];
         if (newRoom.prefab != null)
         {
             activeRoom = Instantiate(newRoom.prefab);
@@ -73,17 +83,46 @@ public class LevelController : MonoBehaviour
         Vector3 startLocation = activeRoomController.startPosition.position;
         Debug.Log($"Warping player to {startLocation}");
         player.Warp(startLocation);
+        if(screenFade == null)
+        {
+            InitializeRoom();
+        }
+    }
 
+    private void InstantLoad()
+    {
+        Room newRoom = levelMap[currentLayer][currentRoomInd];
+        if (newRoom.prefab != null)
+        {
+            activeRoom = Instantiate(newRoom.prefab);
+            activeRoomController = activeRoom.GetComponentInChildren<RoomController>();
+        }
+        Vector3 startLocation = activeRoomController.startPosition.position;
+        Debug.Log($"Warping player to {startLocation}");
+        player.Warp(startLocation);
+        InitializeRoom();
+    }
+    
+    public void InitializeRoom()
+    {
         activeRoomController.Initialize(GetNextLayerRooms(), player, levelIcons);
 
         activeRoomController.onRoomChange += OnLoadRequest;
         activeRoomController.onFinalRoomChange += OnLevelEnd;
-    } 
+    }
 
     private void OnLoadRequest(int ind)
     {
         currentLayer += 1;
-        LoadNextStage(ind);
+        currentRoomInd = ind;
+        if (screenFade != null)
+        {
+            screenFade.StartFadeSequence();
+        }
+        else
+        {
+            LoadNextRoom();
+        }
     }
 
     private void ClearPickUps()
@@ -104,8 +143,14 @@ public class LevelController : MonoBehaviour
 
     private void OnLevelEnd()
     {
-        
-        onLevelFinish.Invoke();
+        if (nextSceneIndex == 0)
+        {
+            onRunFinish.Invoke();
+        }
+        else
+        {
+            onLevelFinish.Invoke();
+        }
     }
     public void LoadNextLevel()
     {

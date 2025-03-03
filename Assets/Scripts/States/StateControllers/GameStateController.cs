@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static StateController;
 
 public class GameStateController : StateController
@@ -16,6 +17,7 @@ public class GameStateController : StateController
         playerController.onInventoryToogle += GoToInventory;
         playerController.player.onPlayerDeath += GoToDeath;
         levelController.onLevelFinish += GoToEndLevel;
+        levelController.onRunFinish += GoToRunEnd;
         var states = GetComponentsInChildren<IState>(true);
         foreach (var state in states)
         {
@@ -65,8 +67,14 @@ public class GameStateController : StateController
         m_stateActivator.Push<DeathState>();
     }
 
+    public void GoToRunEnd()
+    {
+        m_stateActivator.Push<RunEndState>();
+    }
+
     public void GoToMenu()
     {
-
+        Destroy(playerController.player);
+        SceneManager.LoadScene(0);
     }
 }
