@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     Movement m_movement;
     Dash m_dash;
     Health m_health;
+    public Health m_healthValue => m_health;
+
     MeleePunch m_meleePunch;
     WeaponManager m_weaponManager;
     PlayerStats m_stats;
@@ -21,6 +23,7 @@ public class Player : MonoBehaviour
     PlayerAnimationManager m_animator;
     //SkillManager m_skillManager;
     SkillsManager m_skillsManager;
+    public SkillsManager skillsManagerValue => m_skillsManager;
     private PlayerState m_state = PlayerState.Base;
     public Action onDash;
     public Action<Vector3> onMove;

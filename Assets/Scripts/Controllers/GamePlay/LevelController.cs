@@ -12,6 +12,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] GameObject playerDefaultPrefab;
     [SerializeField] CameraController cameraController;
     [SerializeField] PlayerController playerController;
+    [SerializeField] UIConfigurator uiConfigurator;
 
     MapGenerator mapGenerator;
 
@@ -44,6 +45,7 @@ public class LevelController : MonoBehaviour
 
     private void Start()
     {
+        uiConfigurator.ConfigureWeaponCageManager(player);
         UpdateMap();
         LoadNextStage(0);
     }
