@@ -936,7 +936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agentAttack: {fileID: 6640982319625550275}
-  damage: 10
+  damage: 20
 --- !u!1 &1998789271404788783
 GameObject:
   m_ObjectHideFlags: 0
@@ -3696,7 +3696,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.5
-  m_Speed: 4
+  m_Speed: 5
   m_Acceleration: 30
   avoidancePriority: 0
   m_AngularSpeed: 120
@@ -3838,7 +3838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af9019e781e98f54a9503cd47485b3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 75
+  maxHealth: 30
 --- !u!1 &8455568746768109683
 GameObject:
   m_ObjectHideFlags: 0

@@ -535,10 +535,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.68185705
-  m_Height: 3.0572977
+  m_Radius: 1
+  m_Height: 4
   m_Direction: 1
-  m_Center: {x: 0.0075721145, y: 0.34576035, z: -0.047599673}
+  m_Center: {x: 0.0075721145, y: 1.5, z: -0.047599673}
 --- !u!195 &8311668215647803182
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -549,7 +549,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.5
-  m_Speed: 4
+  m_Speed: 2
   m_Acceleration: 30
   avoidancePriority: 0
   m_AngularSpeed: 120
@@ -691,7 +691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af9019e781e98f54a9503cd47485b3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 120
 --- !u!1 &1453879127856989384
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,7 +2410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agentAttack: {fileID: 3948521675672663613}
-  damage: 10
+  damage: 30
 --- !u!1 &6771502691646560025
 GameObject:
   m_ObjectHideFlags: 0
