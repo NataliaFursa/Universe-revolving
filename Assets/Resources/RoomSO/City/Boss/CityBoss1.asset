@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb0d8c8e422afa49b1ab489944211f4, type: 3}
   m_Name: CityBoss1
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1973923578825356303, guid: 4484780d1d529f64d906163fc04847d4, type: 3}
+  prefab: {fileID: 2508416040084176706, guid: aca8d9d5922d24c5eb7958553f251517, type: 3}
   roomName: CityBoss
   weight: 1
