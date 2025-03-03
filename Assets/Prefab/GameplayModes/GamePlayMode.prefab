@@ -406,7 +406,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6effef1310545d6875d9608fdb6c75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
+  player: {fileID: 0}
+  name_text: {fileID: 305584069768281038}
+  type_text: {fileID: 4368680031318857039}
+  description_text: {fileID: 6496409591004821838}
+  "\u0441haracteristics_text": {fileID: 7733877174740973583}
 --- !u!1 &886474924143963360
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,6 +475,7 @@ GameObject:
   - component: {fileID: 5643606337714546951}
   - component: {fileID: 3051289840398857395}
   - component: {fileID: 6721438043946992820}
+  - component: {fileID: 7716394440455326225}
   m_Layer: 5
   m_Name: Scope_icon
   m_TagString: Untagged
@@ -535,6 +540,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7716394440455326225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972946828197443833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c6d114ba0f8428d96c3db001fb2c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1070722098399488273
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,7 +757,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -171.83598, w: 0}
+  m_margin: {x: 0, y: 0, z: -171.83598, w: -91.13914}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -996,6 +1013,7 @@ GameObject:
   - component: {fileID: 7346088537168627321}
   - component: {fileID: 8145390180327693514}
   - component: {fileID: 1010171776674493655}
+  - component: {fileID: 2642366742420544799}
   m_Layer: 5
   m_Name: Reciever_icon
   m_TagString: Untagged
@@ -1060,6 +1078,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2642366742420544799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757368550255226885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c6d114ba0f8428d96c3db001fb2c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2227012340252502891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,7 +1688,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -196.97809, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2200,7 +2230,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -434.07745, w: -127.09469}
+  m_margin: {x: 0, y: 0, z: -434.07745, w: -168.25427}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3457,6 +3487,7 @@ MonoBehaviour:
   weaponCageManager: {fileID: 7348249840020289389}
   skillCooldownDisplay: {fileID: 8587932820765832012}
   healthSlider: {fileID: 2866224424068187806}
+  uI_Inventory: {fileID: 896885733118716779}
 --- !u!1 &4258307199151699339
 GameObject:
   m_ObjectHideFlags: 0
@@ -3720,7 +3751,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -312.84857, w: 0}
+  m_margin: {x: 0, y: 0, z: -256.98923, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5855,6 +5886,7 @@ GameObject:
   - component: {fileID: 6524278986702192298}
   - component: {fileID: 5249969873076085704}
   - component: {fileID: 4259819863007255295}
+  - component: {fileID: 2316449655773043638}
   m_Layer: 5
   m_Name: Magazine_icon
   m_TagString: Untagged
@@ -5919,6 +5951,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2316449655773043638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7326953340291018708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c6d114ba0f8428d96c3db001fb2c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7445063735137560887
 GameObject:
   m_ObjectHideFlags: 0
