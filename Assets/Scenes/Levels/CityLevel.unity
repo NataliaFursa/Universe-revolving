@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &18422541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7700951274166547294, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+  m_PrefabInstance: {fileID: 1742172721}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b44385c0a33549509bd0e7276085918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &332749920
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,6 +264,7 @@ MonoBehaviour:
   cameraController: {fileID: 896467054}
   playerController: {fileID: 332749922}
   screenFade: {fileID: 1439854558}
+  uiConfigurator: {fileID: 18422541}
 --- !u!1 &829811745
 GameObject:
   m_ObjectHideFlags: 0
