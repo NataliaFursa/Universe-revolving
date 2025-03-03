@@ -13,6 +13,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] CameraController cameraController;
     [SerializeField] PlayerController playerController;
     [SerializeField] ScreenFade screenFade;
+    [SerializeField]UIConfigurator uiConfigurator;
 
     MapGenerator mapGenerator;
 
@@ -54,6 +55,7 @@ public class LevelController : MonoBehaviour
 
     private void Start()
     {
+        uiConfigurator.ConfigureWeaponCageManager(player);
         UpdateMap();
         InstantLoad();
         screenFade.StartFadeIn();

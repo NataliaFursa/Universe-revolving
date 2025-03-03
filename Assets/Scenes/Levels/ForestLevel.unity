@@ -228,7 +228,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6f9d6e2d9c86c874084b908f756d85fb, type: 2}
   rewardRoomList:
   - {fileID: 11400000, guid: ea0687337697b414da6bc3a1ada5336e, type: 2}
-  restRoomList: []
+  restRoomList:
+  - {fileID: 11400000, guid: e454699d39c57134c8297af99d8056e3, type: 2}
   shopRoomList:
   - {fileID: 11400000, guid: 34a12ab251d55b54787ac67722421d85, type: 2}
   bossRoomList:

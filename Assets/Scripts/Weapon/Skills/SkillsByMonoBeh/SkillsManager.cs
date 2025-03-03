@@ -5,11 +5,13 @@ using System.Collections.Generic;
 public class SkillsManager : MonoBehaviour
 {
     [Header("Healing Skill Settings")]
-     private HealingSkill healingSkill;
+   [SerializeField] private HealingSkill healingSkill;
+    public HealingSkill healingSkillValue =>healingSkill;
     private float healingSkillCooldown = 20f;
 
     [Header("Boost Skill Settings")]
-    private BoostSkill boostSkill;
+   [SerializeField] private BoostSkill boostSkill;
+    public BoostSkill boostSkillValue =>boostSkill;
     private float boostSkillCooldown = 15f;
     
     private Health playerHealth;
@@ -29,11 +31,6 @@ public class SkillsManager : MonoBehaviour
 
     private void Awake()
     {
-        healingSkill = GetComponentInChildren<HealingSkill>();
-        boostSkill = GetComponentInChildren<BoostSkill>();
-
-    
-
         playerHealth = GetComponent<Health>();
         playerMovement = GetComponent<Movement>();
     }

@@ -5,11 +5,15 @@ public class HealthSlider : MonoBehaviour
 {
     [Header("UI References")]
     [SerializeField] private Health health;
-    [SerializeField] private Slider hpStat; // Ссылка на слайдер здоровья
-    [SerializeField] private GameObject canvas; // Ссылка на Canvas врага
+    [SerializeField] private Slider hpStat; 
+    [SerializeField] private GameObject canvas; 
 
 
-   // Ссылка на компонент здоровья
+
+    public void SetPlayer(Player player)
+    {
+        health = player.m_healthValue;
+    }
 
     private void Awake()
     {
@@ -20,7 +24,7 @@ public class HealthSlider : MonoBehaviour
     {
         if (health != null)
         {
-            health.onZeroHealth += OnZeroHealth; 
+            health.onZeroHealth += OnZeroHealth;
         }
     }
 
@@ -36,8 +40,8 @@ public class HealthSlider : MonoBehaviour
     {
         if (hpStat != null && health != null)
         {
-            hpStat.maxValue = health.GetMaxHealth(); 
-            hpStat.value = health.GetCurrentHealth(); 
+            hpStat.maxValue = health.GetMaxHealth();
+            hpStat.value = health.GetCurrentHealth();
         }
     }
 
@@ -56,6 +60,6 @@ public class HealthSlider : MonoBehaviour
 
     private void OnZeroHealth()
     {
-       // Debug.Log("Enemy has died.");
+        // Debug.Log("Enemy has died.");
     }
 }

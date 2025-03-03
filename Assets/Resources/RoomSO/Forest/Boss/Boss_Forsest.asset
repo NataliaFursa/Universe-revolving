@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb0d8c8e422afa49b1ab489944211f4, type: 3}
   m_Name: Boss_Forsest
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8143417867636038845, guid: 8c05c0467e19d4dc48793f91cced632c, type: 3}
+  prefab: {fileID: 5874917065096449400, guid: 7c5099efacda041b4a0051d8bb22664a, type: 3}
   roomName: ForestBoss
   weight: 0

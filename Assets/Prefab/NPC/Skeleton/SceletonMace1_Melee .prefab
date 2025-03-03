@@ -3657,8 +3657,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1684218296337515681}
   - {fileID: 5195770721305901156}
+  - {fileID: 1684218296337515681}
   - {fileID: 1987338006830257527}
   - {fileID: 8136546358890099306}
   m_Father: {fileID: 0}
@@ -3838,7 +3838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af9019e781e98f54a9503cd47485b3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 75
 --- !u!1 &8455568746768109683
 GameObject:
   m_ObjectHideFlags: 0
