@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  maxDistance: 10
+  maxDistance: 50
 --- !u!54 &4199097622420705693
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -147,6 +147,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4011702918526436039, guid: 4484866c96f56bb47ac5474f112aad57, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7141d2db2f2d91d46a3e58a658603b89, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
