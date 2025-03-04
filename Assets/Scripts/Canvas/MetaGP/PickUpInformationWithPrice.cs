@@ -21,7 +21,7 @@ public class PickUpInformationWithPrice : PickupInformation_Table
     public void SetPrice()
     {
         var price = partPickUpWithPrice.Price;
-        string priceString = $"Price: {price.ToString()}";
+        string priceString = $"Цена: {price.ToString()}";
         price_text.text = priceString;
     }
 }
