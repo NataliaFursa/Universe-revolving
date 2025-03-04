@@ -1407,6 +1407,8 @@ MonoBehaviour:
   weaponCageManager: {fileID: 1772050275931953936}
   skillCooldownDisplay: {fileID: 556674452456014186}
   healthSlider: {fileID: 2250045456362763575}
+  uI_Inventory: {fileID: 3625253337974428464}
+  moneyCounterDisplay: {fileID: 0}
 --- !u!1 &1596855078546969882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2976,6 +2978,7 @@ GameObject:
   - component: {fileID: 556674452456014186}
   - component: {fileID: 1772050275931953936}
   - component: {fileID: 2250045456362763575}
+  - component: {fileID: 511898141228221791}
   m_Layer: 0
   m_Name: GamePlayState
   m_TagString: Untagged
@@ -3060,6 +3063,19 @@ MonoBehaviour:
   health: {fileID: 0}
   hpStat: {fileID: 4191426535754433917}
   canvas: {fileID: 6013348221511694651}
+--- !u!114 &511898141228221791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3439358375410475707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c998908c0e54e5cb7484cf642150d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyText: {fileID: 3316379820690601685}
 --- !u!1 &3513191040373749862
 GameObject:
   m_ObjectHideFlags: 0
@@ -3799,7 +3815,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6effef1310545d6875d9608fdb6c75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
+  player: {fileID: 0}
+  name_text: {fileID: 0}
+  type_text: {fileID: 0}
+  description_text: {fileID: 0}
+  "\u0441haracteristics_text": {fileID: 0}
 --- !u!1 &3873261723816069046
 GameObject:
   m_ObjectHideFlags: 0

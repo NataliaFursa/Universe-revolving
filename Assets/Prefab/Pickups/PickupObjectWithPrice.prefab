@@ -5090,6 +5090,7 @@ MonoBehaviour:
   description_text: {fileID: 6993168406383944479}
   "\u0441haracteristics_text": {fileID: 752287171826804830}
   price_text: {fileID: 4725403970560331004}
+  partPickUpWithPrice: {fileID: 5495117998381743905}
 --- !u!1 &2861654568629879076
 GameObject:
   m_ObjectHideFlags: 0

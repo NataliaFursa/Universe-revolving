@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -6,6 +7,7 @@ public class PlayerStats : MonoBehaviour
     public float baseHP;
     public int startMoney;
     public int currentMoney;
+    public Action onChangeMoneyValue;
 
     public void ToDefault()
     {
@@ -19,12 +21,14 @@ public class PlayerStats : MonoBehaviour
     public void PlusMoney(int money)
     {
         currentMoney += money;
+        onChangeMoneyValue?.Invoke();
     }
     public bool MinusMoney(int money)
     {
         if (currentMoney >= money)
         {
             currentMoney -= money;
+            onChangeMoneyValue?.Invoke();
             return true;
         }
         else return false;
