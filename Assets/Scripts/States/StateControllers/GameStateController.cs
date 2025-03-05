@@ -74,6 +74,7 @@ public class GameStateController : StateController
 
     public void GoToMenu()
     {
+        JsonManager.SaveToJson();
         Destroy(playerController.player);
         SceneManager.LoadScene(0);
     }
