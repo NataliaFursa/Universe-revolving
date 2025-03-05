@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb0d8c8e422afa49b1ab489944211f4, type: 3}
   m_Name: CastleBoss
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7732312479108546364, guid: fbdc160af20b742fdaa61965b632c223, type: 3}
+  prefab: {fileID: 7732312479108546364, guid: 63ecc729f3b3142d4a6f8d61318cc6b2, type: 3}
   roomName: Castle boss
   weight: 0
