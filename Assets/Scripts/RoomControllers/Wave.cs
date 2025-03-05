@@ -6,10 +6,12 @@ using UnityEngine;
 public class Wave : MonoBehaviour
 {
     public List<Enemy> enemiesList;
-    void Awake()
+
+    public void Init()
     {
         enemiesList = new List<Enemy>(GetComponentsInChildren<Enemy>());
     }
+
     public void Add(Enemy enemy)
     {
         enemiesList.Add(enemy);

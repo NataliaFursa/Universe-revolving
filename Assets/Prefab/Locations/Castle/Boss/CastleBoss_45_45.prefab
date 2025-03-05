@@ -768,6 +768,7 @@ MonoBehaviour:
   - {fileID: 4444832348384558658}
   rewardContainer: {fileID: 0}
   waves: []
+  enemySpawnDisplayObject: {fileID: 4129445043865457264, guid: 315cafa863fbac5478cb4cdb584e9eeb, type: 3}
 --- !u!1 &1424911968853570783
 GameObject:
   m_ObjectHideFlags: 0

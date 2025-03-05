@@ -1465,9 +1465,10 @@ MonoBehaviour:
   - {fileID: 4806987928668063642}
   - {fileID: 739298933651078238}
   - {fileID: 3566500663341679073}
-  rewardContainer: {fileID: 0}
+  rewardContainer: {fileID: 5768822168999035467, guid: 17caa59363936494a86f09d691879c18, type: 3}
   waves:
   - {fileID: 700685421110622286}
+  enemySpawnDisplayObject: {fileID: 4129445043865457264, guid: 315cafa863fbac5478cb4cdb584e9eeb, type: 3}
 --- !u!1 &6181294620875686148
 GameObject:
   m_ObjectHideFlags: 0

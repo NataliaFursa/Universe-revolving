@@ -19,12 +19,18 @@ public class BattleRoomController : RoomController
     */
 
     [SerializeField] private List<Wave> waves;
+    [SerializeField] private GameObject enemySpawnDisplayObject;
 
     private int currentWave;
+    private List<GameObject> displaysList = new List<GameObject>();
     
 
     override protected void SpecProcessing()
     {
+        foreach (Wave wave in waves)
+        {
+            wave.Init();
+        }
         if (waves.Count == 0)
         {
             instantCompletion = true;
@@ -68,6 +74,30 @@ public class BattleRoomController : RoomController
         {
             waves[wave].InitWave(player, OnEnemyDeath);
         }
+        ClearDisplays();
+        if ((currentWave < waves.Count - 1) && (enemySpawnDisplayObject != null)) {
+            SpawnDisplays();
+        }
+    }
+
+    private void SpawnDisplays()
+    {
+        foreach(Enemy enemyToDisplay in waves[currentWave + 1].enemiesList)
+        {
+            RaycastHit hit;
+            Physics.Raycast(enemyToDisplay.transform.position, new Vector3(0, -1, 1), out hit);
+            GameObject spawnDisplay = Instantiate(enemySpawnDisplayObject, hit.point, Quaternion.identity);
+            displaysList.Add(spawnDisplay);
+        }
+    }
+
+    private void ClearDisplays()
+    {
+        foreach (GameObject display in displaysList)
+        {
+            Destroy(display);
+        }
+        displaysList = new List<GameObject>();
     }
 
     override protected void FinishRoomTask()

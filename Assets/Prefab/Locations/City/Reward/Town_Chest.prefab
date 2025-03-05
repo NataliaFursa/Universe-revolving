@@ -1051,7 +1051,7 @@ MonoBehaviour:
   - {fileID: 5643327057040893583}
   - {fileID: 4845350060759661584}
   rewardContainer: {fileID: 0}
-  reward: {fileID: 0}
+  reward: {fileID: 6446448641095563528, guid: 8ad0a03afc0a73c4cb99f772ae417039, type: 3}
   roomRewardSpawnPosition: {fileID: 1327546009440832635}
 --- !u!1 &4845350060759661584
 GameObject:
@@ -4990,15 +4990,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6013632388104371080, guid: 6e0965b76baec374d9a8e0c82f9033cb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 7.7678995
+      value: 8.226983
       objectReference: {fileID: 0}
     - target: {fileID: 6013632388104371080, guid: 6e0965b76baec374d9a8e0c82f9033cb, type: 3}
       propertyPath: m_LocalScale.z
-      value: 7.6516995
+      value: 8.286026
       objectReference: {fileID: 0}
     - target: {fileID: 6013632388104371080, guid: 6e0965b76baec374d9a8e0c82f9033cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.4595
+      value: -17.1659
       objectReference: {fileID: 0}
     - target: {fileID: 6013632388104371080, guid: 6e0965b76baec374d9a8e0c82f9033cb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5006,7 +5006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6013632388104371080, guid: 6e0965b76baec374d9a8e0c82f9033cb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.7412
+      value: 10.5684
       objectReference: {fileID: 0}
     - target: {fileID: 6013632388104371080, guid: 6e0965b76baec374d9a8e0c82f9033cb, type: 3}
       propertyPath: m_LocalRotation.w
