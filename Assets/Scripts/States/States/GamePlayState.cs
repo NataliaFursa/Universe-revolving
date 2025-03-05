@@ -24,7 +24,7 @@ public class GamePlayState : IState
         {
             inputActions.FindActionMap("Player").Enable();
         }
-        onGamePlay?.Invoke();
+        //onGamePlay?.Invoke();
     }
 
     override protected void OnExit()
@@ -40,6 +40,7 @@ public class GamePlayState : IState
         base.Activate();
         Time.timeScale = 1f;
         cameraController.ToogleCameraState(true);
+        onGamePlay?.Invoke();
     }
     public override void Deactivate()
     {
