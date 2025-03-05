@@ -193,14 +193,14 @@ MonoBehaviour:
   commonBaseCost: 50
   rareBaseCost: 250
   epicBaseCost: 500
-  legendaryBaseCost: 1000
+  legendaryBaseCost: 750
   randomPriceRange: 10
   randomPriceStep: 0
   healPrice: 150
   commonChance: 70
-  rareChance: 20
-  epicChance: 10
-  legendaryChance: 5
+  rareChance: 50
+  epicChance: 30
+  legendaryChance: 20
 --- !u!1 &1981203267518132019
 GameObject:
   m_ObjectHideFlags: 0
