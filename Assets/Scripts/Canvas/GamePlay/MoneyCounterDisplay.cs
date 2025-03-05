@@ -10,7 +10,6 @@ public class MoneyCounterDisplay : MonoBehaviour
     public void SetPlayer(Player player)
     {
         playerStats = player.statsValue;
-        Debug.Log($"PLAYER {player.statsValue}");
         RefreshMoneyInfo(playerStats);
 
         if (playerStats)

@@ -7,13 +7,17 @@ public class PlayerStats : MonoBehaviour
     public float baseHP;
     public int startMoney;
     public int currentMoney;
+    public int currentXP;
+
     public Action onChangeMoneyValue;
+    public Action onChangeXPValue;
 
     public void ToDefault()
     {
         startMoney = Meta.baseMoney;
         baseMoveSpeed = Meta.baseMS;
         baseHP = Meta.baseHP;
+        currentXP = Meta.PlayerXP;
 
 
         currentMoney = startMoney;
