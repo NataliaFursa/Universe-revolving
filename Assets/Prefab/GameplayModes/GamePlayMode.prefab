@@ -5358,6 +5358,7 @@ MonoBehaviour:
   healthSlider: {fileID: 2866224424068187806}
   uI_Inventory: {fileID: 896885733118716779}
   moneyCounterDisplay: {fileID: 6993627322895957718}
+  currentXP_Display: {fileID: 6415749413769476488}
 --- !u!1 &4193506230980323363
 GameObject:
   m_ObjectHideFlags: 0
