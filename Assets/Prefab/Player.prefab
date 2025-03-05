@@ -6808,7 +6808,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  m_currentHealth: 0
 --- !u!114 &6429466006536719843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6852,6 +6851,7 @@ MonoBehaviour:
   baseHP: 100
   startMoney: 100
   currentMoney: 0
+  currentXP: 0
 --- !u!114 &2646287300970150950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6864,6 +6864,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 652fe44bddfa54a3b9f10f80d5210c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healingSkill: {fileID: 4678690613002660798}
+  boostSkill: {fileID: 2065300516097532747}
 --- !u!1 &4489478163040762285
 GameObject:
   m_ObjectHideFlags: 0
