@@ -1,8 +1,9 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Upgrate : IState
+public class Upgrade : MonoBehaviour
 {
     //Сама прокачка
     public UpgrateData upgrateData;
@@ -15,11 +16,11 @@ public class Upgrate : IState
         {
             Meta.PlayerXP -= 100 + (150*m_MSCost);
             m_MSCost += 1;
-            MSUpgrate();
+            MSUpgrade();
         }
         else return;
     }
-    private void MSUpgrate()
+    private void MSUpgrade()
     {
         if (Meta.baseMS < 12) Meta.baseMS += 1;
         else return;
@@ -34,11 +35,11 @@ public class Upgrate : IState
         {
             Meta.PlayerXP -= 100+ (100*m_HPCost);
             m_HPCost += 1;
-            HPUpgrate();
+            HPUpgrade();
         }
         else return;
     }
-    private void HPUpgrate()
+    private void HPUpgrade()
     {
         if (Meta.baseHP < 200) Meta.baseMS += 25;
         else return;
@@ -53,11 +54,11 @@ public class Upgrate : IState
         {
             Meta.PlayerXP -= 250+ (250*m_BMCost);
             m_BMCost += 1;
-            BMUpgrate();
+            BMUpgrade();
         }
         else return;
     }
-    private void BMUpgrate()
+    private void BMUpgrade()
     {
         if (Meta.baseMoney < 600) Meta.baseMoney += 150;
         else return;
@@ -65,7 +66,7 @@ public class Upgrate : IState
 
     public void Load()
     {
-        UpgrateData Load = JsonManager.UpgrateLoadToJson();
+        UpgrateData Load = JsonManager.UpgradeLoadToJson();
         m_MSCost =Load.MSCost;
         m_HPCost =Load.HPCost;
         m_BMCost =Load.BMCost;
@@ -76,7 +77,7 @@ public class Upgrate : IState
         upgrateData.MSCost = m_MSCost;
         upgrateData.HPCost = m_HPCost;
         upgrateData.BMCost = m_BMCost;
-        JsonManager.UpgrateSaveToJson(upgrateData);
+        JsonManager.UpgradeSaveToJson(upgrateData);
     }
     public class UpgrateData
     {
@@ -87,30 +88,30 @@ public class Upgrate : IState
     }
 
     // Взаимодействие с интерфейсом
-    protected override void OnEnter()
+    public void Start()
     {
         Load();
         JsonManager.LoadFromJson();
         TextSet();
     }
 
-    protected override void OnExit()
+    public void OnDisable()
     {
         Save();
         JsonManager.SaveToJson();
     }
 
-    public void MSUpgrateButton()
+    public void MSUpgradeButton()
     {
         MSUpdate();
         TextSet();
     }
-    public void HPUpgrateButton()
+    public void HPUpgradeButton()
     {
         HPUpdate();
         TextSet();
     }
-    public void BMUpgrateButton()
+    public void BMUpgradeButton()
     {
         BMUpdate();
         TextSet();

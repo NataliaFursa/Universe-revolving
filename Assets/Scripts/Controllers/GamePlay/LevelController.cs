@@ -81,7 +81,7 @@ public class LevelController : MonoBehaviour
             activeRoom = Instantiate(newRoom.prefab);
             activeRoomController = activeRoom.GetComponentInChildren<RoomController>();
         }
-        Vector3 startLocation = activeRoomController.startPosition.position;
+         Vector3 startLocation = activeRoomController.startPosition.position;
         Debug.Log($"Warping player to {startLocation}");
         player.Warp(startLocation);
         if(screenFade == null)

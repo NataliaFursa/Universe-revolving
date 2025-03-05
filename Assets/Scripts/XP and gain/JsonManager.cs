@@ -1,6 +1,6 @@
 using System.IO;
 using UnityEngine;
-using static Upgrate;
+using static Upgrade;
 
 public static class JsonManager
 {
@@ -25,12 +25,12 @@ public static class JsonManager
         data.HP = Meta.baseHP;
         data.StartMoney = Meta.baseMoney;
     }
-    static public void UpgrateSaveToJson(UpgrateData upgrateData)
+    static public void UpgradeSaveToJson(UpgrateData upgrateData)
     {
         string json = JsonUtility.ToJson(upgrateData, true); // Сериализация в JSON с отступами
         string path = Path.Combine(Application.persistentDataPath, "upgrateData.json"); // Путь к файлу
     }
-    static public UpgrateData UpgrateLoadToJson()
+    static public UpgrateData UpgradeLoadToJson()
     {
         string path = Path.Combine(Application.persistentDataPath, "upgrateData.json"); // Путь к файлу
         if (File.Exists(path))
