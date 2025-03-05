@@ -361,7 +361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7755143683031859165}
   - component: {fileID: 517109546504910795}
-  - component: {fileID: 3066667471432637802}
+  - component: {fileID: 1797819780654195175}
   m_Layer: 9
   m_Name: Weapon
   m_TagString: Projectile
@@ -398,7 +398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAttack: {fileID: 1301479943812240789}
   damage: 20
---- !u!65 &3066667471432637802
+--- !u!65 &1797819780654195175
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -417,8 +417,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 4, z: 3}
-  m_Center: {x: 0, y: 1, z: 0.7}
+  m_Size: {x: 3, y: 3, z: 1}
+  m_Center: {x: 0, y: 2, z: 0.7}
 --- !u!1 &867524797375878189
 GameObject:
   m_ObjectHideFlags: 0
