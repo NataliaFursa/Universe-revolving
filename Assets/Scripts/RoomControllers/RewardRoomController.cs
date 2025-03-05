@@ -9,6 +9,7 @@ public class RewardRoomController : RoomController
     {
         if (reward != null)
         {
+            Instantiate(reward, roomRewardSpawnPosition);
             reward.onOpen += OnContainerOpen;
         }
         else
