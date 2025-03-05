@@ -211,11 +211,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6311ee93bd27fde4c9a83ee4a93088a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSize: 11
+  levelSize: 9
   minRoomCountPerLayer: 1
   maxRoomCountPerLayer: 1
   fixedShopLevel: 0
-  shopSoloLayer: 1
+  shopSoloLayer: 0
   rewardRoomsPerLevel: -1
   shopRoomsPerLevel: -1
   restRoomsPerLevel: -1
@@ -224,7 +224,6 @@ MonoBehaviour:
   battleRoomList:
   - {fileID: 11400000, guid: 522ddb255a7eba4479604888771a69f6, type: 2}
   - {fileID: 11400000, guid: 10a7280d3286e0845af9763f885e7423, type: 2}
-  - {fileID: 11400000, guid: 664ad644ab46b2a42bbe43e31afeecb0, type: 2}
   - {fileID: 11400000, guid: 6f9d6e2d9c86c874084b908f756d85fb, type: 2}
   rewardRoomList:
   - {fileID: 11400000, guid: ea0687337697b414da6bc3a1ada5336e, type: 2}
@@ -250,7 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   levelIcons: {fileID: 11400000, guid: 7670afbb0d085c7419f8d73e101cc4ea, type: 2}
-  nextSceneIndex: 2
+  nextSceneIndex: 5
   playerDefaultPrefab: {fileID: 4339911120683228980, guid: 76f89fce69fd9494e8a6877c54951a26, type: 3}
   cameraController: {fileID: 896467054}
   playerController: {fileID: 332749922}

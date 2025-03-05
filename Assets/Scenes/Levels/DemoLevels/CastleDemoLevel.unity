@@ -308,26 +308,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6311ee93bd27fde4c9a83ee4a93088a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSize: 7
+  levelSize: 6
   minRoomCountPerLayer: 1
-  maxRoomCountPerLayer: 4
-  fixedShopLevel: 3
-  shopSoloLayer: 1
-  rewardRoomsPerLevel: 1
-  shopRoomsPerLevel: 0
-  restRoomsPerLevel: 0
+  maxRoomCountPerLayer: 1
+  fixedShopLevel: 0
+  shopSoloLayer: 0
+  rewardRoomsPerLevel: -1
+  shopRoomsPerLevel: -1
+  restRoomsPerLevel: -1
   UniqueRooms: 1
   startRoom: {fileID: 11400000, guid: a5a23f9145252f3438faeabd8c65651f, type: 2}
   battleRoomList:
   - {fileID: 11400000, guid: 8bca784c1c4f40d41b8047e57a039535, type: 2}
   - {fileID: 11400000, guid: 0fda8c2e410977142a36b348399fa793, type: 2}
   - {fileID: 11400000, guid: f0329b6876fa1594690e7eec350480b9, type: 2}
-  rewardRoomList:
-  - {fileID: 11400000, guid: 96fcbed7f8eed4541bd04fa22df6b09c, type: 2}
+  rewardRoomList: []
   restRoomList:
   - {fileID: 11400000, guid: 8e4b5ee21b2270c4780f4fc19d9776a1, type: 2}
-  shopRoomList:
-  - {fileID: 11400000, guid: 57d272bd3e6ea9f4788bdaf81adc3b7a, type: 2}
+  shopRoomList: []
   bossRoomList:
   - {fileID: 11400000, guid: d06ebe36046ee504fa9373da55823eaf, type: 2}
 --- !u!114 &572306216
