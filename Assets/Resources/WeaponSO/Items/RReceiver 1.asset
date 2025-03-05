@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52d160100c0babe4bbb96d7b9aa4bdb2, type: 3}
-  m_Name: RReceiver
+  m_Name: RReceiver 1
   m_EditorClassIdentifier: 
   type: 2
   <model>k__BackingField: {fileID: 9021712309822036519, guid: 8f4580d53b4e7ab4c818f4d8ca60aa40, type: 3}
-  <damageRate>k__BackingField: 1
-  <delay>k__BackingField: 0.5
+  <damageRate>k__BackingField: 0.45
+  <delay>k__BackingField: 0.1
   <force>k__BackingField: 20
-  <volume>k__BackingField: 1
+  <volume>k__BackingField: 2
   <LegendaryMod>k__BackingField: 

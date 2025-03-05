@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52d160100c0babe4bbb96d7b9aa4bdb2, type: 3}
-  m_Name: LegendaryRayCast
+  m_Name: RailReceiver
   m_EditorClassIdentifier: 
-  type: 0
-  <model>k__BackingField: {fileID: 0}
-  <damageRate>k__BackingField: 0
-  <delay>k__BackingField: 0
-  <force>k__BackingField: 0
-  <volume>k__BackingField: 0
-  <times>k__BackingField: 0
+  type: 2
+  <model>k__BackingField: {fileID: 9021712309822036519, guid: 8f4580d53b4e7ab4c818f4d8ca60aa40, type: 3}
+  <damageRate>k__BackingField: 1.2
+  <delay>k__BackingField: 0.5
+  <force>k__BackingField: 25
+  <volume>k__BackingField: 1
+  <LegendaryMod>k__BackingField: Ray

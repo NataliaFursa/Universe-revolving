@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item 0
   m_EditorClassIdentifier: 
   id: 0
-  rare: 1
+  rare: 0
   itemName: "\u0412\u0437\u043E\u0440"
   description: "\u0427\u0451\u0442\u043A\u0438\u0439 \u043F\u0440\u0438\u0446\u0435\u043B,
     \u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0438\u0432\u0430\u044E\u0449\u0438\u0439 
