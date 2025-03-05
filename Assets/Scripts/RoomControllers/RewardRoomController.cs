@@ -10,12 +10,8 @@ public class RewardRoomController : RoomController
     {
         if (reward != null)
         {
-            try
-            {
-                Instantiate(reward, roomRewardSpawnPosition);
-            }
-            catch { }
-            reward.onOpen += OnContainerOpen;
+            RewardContainer spawnChest = Instantiate(reward, roomRewardSpawnPosition);
+            spawnChest.onOpen += OnContainerOpen;
         }
         else
         {
