@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Upgrade : MonoBehaviour
 {
     //Сама прокачка
-    public UpgrateData upgrateData;
+    public UpgradeData upgrateData;
     public int m_MSCost = 0;
     public int MSMaxlvl = 4;
     public int MSCost { get => 100+ (150*m_MSCost); }
@@ -66,20 +66,29 @@ public class Upgrade : MonoBehaviour
 
     public void Load()
     {
-        UpgrateData Load = JsonManager.UpgradeLoadToJson();
-        m_MSCost =Load.MSCost;
-        m_HPCost =Load.HPCost;
-        m_BMCost =Load.BMCost;
+        UpgradeData Load = JsonManager.UpgradeLoadToJson();
+        if (Load != null)
+        {
+            m_MSCost = Load.MSCost;
+            m_HPCost = Load.HPCost;
+            m_BMCost = Load.BMCost;
+        }
+        else
+        {
+            m_MSCost = 0;
+            m_HPCost = 0;
+            m_BMCost = 0;
+        }
     }
     public void Save()
     {
-        upgrateData = new UpgrateData();
+        upgrateData = new UpgradeData();
         upgrateData.MSCost = m_MSCost;
         upgrateData.HPCost = m_HPCost;
         upgrateData.BMCost = m_BMCost;
         JsonManager.UpgradeSaveToJson(upgrateData);
     }
-    public class UpgrateData
+    public class UpgradeData
     {
         public int MSCost;
         public int HPCost;

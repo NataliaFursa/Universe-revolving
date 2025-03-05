@@ -6,7 +6,7 @@ public static class JsonManager
 {
     public static PlayerData playerData;
     public static PlayerData loadedData;
-    public static UpgrateData j_upgrateData;
+    public static UpgradeData j_upgrateData;
     
     
     public class PlayerData
@@ -25,18 +25,18 @@ public static class JsonManager
         data.HP = Meta.baseHP;
         data.StartMoney = Meta.baseMoney;
     }
-    static public void UpgradeSaveToJson(UpgrateData upgrateData)
+    static public void UpgradeSaveToJson(UpgradeData upgrateData)
     {
         string json = JsonUtility.ToJson(upgrateData, true); // Сериализация в JSON с отступами
         string path = Path.Combine(Application.persistentDataPath, "upgrateData.json"); // Путь к файлу
     }
-    static public UpgrateData UpgradeLoadToJson()
+    static public UpgradeData UpgradeLoadToJson()
     {
         string path = Path.Combine(Application.persistentDataPath, "upgrateData.json"); // Путь к файлу
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path); // Чтение JSON строки из файла
-            j_upgrateData = JsonUtility.FromJson<UpgrateData>(json); // Десериализация JSON в объект PlayerData
+            j_upgrateData = JsonUtility.FromJson<UpgradeData>(json); // Десериализация JSON в объект PlayerData
             return j_upgrateData;
         }
         else
