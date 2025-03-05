@@ -1498,10 +1498,10 @@ MonoBehaviour:
   randomPriceRange: 10
   randomPriceStep: 0
   healPrice: 150
-  commonChance: 90
+  commonChance: 70
   rareChance: 60
-  epicChance: 30
-  legendaryChance: 5
+  epicChance: 50
+  legendaryChance: 40
 --- !u!1 &3882329453708173880
 GameObject:
   m_ObjectHideFlags: 0
