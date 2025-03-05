@@ -23,8 +23,6 @@ public class Weapon : MonoBehaviour
     public int Ammo { get => ammo; }
     public int MaxAmmo = 228;
     public WeaponLego weaponLegoValue => lego;
-    public LayerMask hitLayer;
-    public LineRenderer lineRenderer;
 
     public void Awake()
     {
@@ -32,16 +30,6 @@ public class Weapon : MonoBehaviour
         var partM = lego.magazine.part as Magazine;
         ammo = partM.cage;
         MaxAmmo = partM.cage;
-        if (lineRenderer == null)
-        {
-            lineRenderer = gameObject.AddComponent<LineRenderer>();
-            lineRenderer.startWidth = 0.5f; // Ширина линии в начале
-            lineRenderer.endWidth = 0.5f; // Ширина линии в конце
-            lineRenderer.material = new Material(Shader.Find("Sprites/Default")); // Материал для линии
-            lineRenderer.startColor = Color.red; // Цвет начала линии
-            lineRenderer.endColor = Color.red; // Цвет конца линии
-        }
-        hitLayer = ~LayerMask.GetMask("Default");
     }
 
     public void ToDefault()
@@ -159,9 +147,12 @@ public class Weapon : MonoBehaviour
     {
         var partM = lego.magazine.part as Magazine;
         var partR = lego.receiver.part as Receiver;
-        var partS = lego.scope.part as Scope;
-        if (partR.LegendaryMod == "") ShootBullet(partM, partR, partS);
-        if (partR.LegendaryMod == "Ray") ShootRay(partM, partR, partS);
+        var partS = lego.scope.part as Scope; 
+
+        if (partR.LegendaryMod == "Ray") 
+        ShootRay(partM, partR, partS);
+        else
+        ShootBullet(partM, partR, partS);
 
     }
 
@@ -194,27 +185,8 @@ public class Weapon : MonoBehaviour
     }
     public void ShootRay(Magazine partM, Receiver partR, Scope partS)
     {
-        // Выпускаем Raycast вперёд от позиции объекта
-        RaycastHit hit;
-        Vector3 rayOrigin = transform.position;
-        Vector3 rayDirection = transform.forward;
-
-        if (Physics.Raycast(rayOrigin, rayDirection, out hit, partS.range, hitLayer))
-        {
-            // Если Raycast попал в объект, выводим информацию
-            Debug.Log("Попадание в объект: " + hit.collider.name);
-            DrawRay(rayOrigin, hit.point); // Отображаем линию до точки попадания
-        }
-        else
-        {
-            Debug.Log("Ничего не найдено на расстоянии " + partS.range);
-            DrawRay(rayOrigin, rayOrigin + rayDirection * partS.range); // Отображаем линию на максимальное расстояние
-        }
-    }
-
-    private void DrawRay(Vector3 start, Vector3 end)
-    {
-        lineRenderer.SetPosition(0, start);
-        lineRenderer.SetPosition(1, end);
+        Vector3 spawnPosition = m_muzzle.position + m_muzzle.forward * (partS.range/3);
+        Projectile bullet = Instantiate(bulletPrefab, spawnPosition, m_muzzle.rotation);
+        bullet.transform.localScale = new Vector3(bullet.transform.localScale.x, bullet.transform.localScale.y, bullet.transform.localScale.z * partS.range * 3);
     }
 }

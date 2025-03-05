@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3a8f94ca1425374ea040972791ae83a, type: 3}
-  m_Name: RScope
+  m_Name: PPScope 1
   m_EditorClassIdentifier: 
   type: 0
-  <model>k__BackingField: {fileID: 6463036646569586552, guid: c16740f511b79ee409084ec49001c1f0, type: 3}
-  <damageRate>k__BackingField: 1
-  <spread>k__BackingField: 2
-  <range>k__BackingField: 15
+  <model>k__BackingField: {fileID: 1473628354139540475, guid: 5ca678bb29f4b364c961dd24b0a114aa, type: 3}
+  <damageRate>k__BackingField: 1.8
+  <spread>k__BackingField: 3
+  <range>k__BackingField: 8

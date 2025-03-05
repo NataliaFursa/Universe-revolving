@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e07d60c9d1f0fa4599c6e2fd6e5836a, type: 3}
-  m_Name: RMagazine
+  m_Name: PPMagazine 1
   m_EditorClassIdentifier: 
   type: 1
-  <model>k__BackingField: {fileID: 515544726183751729, guid: 0dceae3d7e4192b49ba7bbeb3ef4d2c6, type: 3}
-  <damageRate>k__BackingField: 1.2
-  <cage>k__BackingField: 6
-  <recharge>k__BackingField: 2
+  <model>k__BackingField: {fileID: 4793217437617316539, guid: 460ab65fe7f9de64586ffc3cb50171ab, type: 3}
+  <damageRate>k__BackingField: 0.8
+  <cage>k__BackingField: 30
+  <recharge>k__BackingField: 4

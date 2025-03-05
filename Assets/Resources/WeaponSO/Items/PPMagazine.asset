@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   <model>k__BackingField: {fileID: 4793217437617316539, guid: 460ab65fe7f9de64586ffc3cb50171ab, type: 3}
-  <damageRate>k__BackingField: 0.65
+  <damageRate>k__BackingField: 0.9
   <cage>k__BackingField: 20
   <recharge>k__BackingField: 5

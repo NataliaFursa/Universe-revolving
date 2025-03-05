@@ -24,6 +24,7 @@ public class WeaponCageManager : MonoBehaviour
         }
     }
 
+    /*
     private void OnDisable()
     {
         if (m_currentWeapon)
@@ -32,6 +33,7 @@ public class WeaponCageManager : MonoBehaviour
             m_currentWeapon.onReloadEnd -= OnChangeCage;
         }
     }
+    */
 
 
     private void OnChangeCage()
