@@ -29,6 +29,9 @@ public static class JsonManager
     {
         string json = JsonUtility.ToJson(upgrateData, true); // Сериализация в JSON с отступами
         string path = Path.Combine(Application.persistentDataPath, "upgrateData.json"); // Путь к файлу
+
+        File.WriteAllText(path, json); // Запись JSON строки в файл
+        Debug.Log("Данные сохранены в: " + path);
     }
     static public UpgradeData UpgradeLoadToJson()
     {
@@ -71,5 +74,27 @@ public static class JsonManager
             Debug.LogError("Файл не найден: " + path);
             Meta.SetDefault();
         }
+    }
+    static public void JsonDataReset()
+    {
+        playerData = new PlayerData();
+        playerData.XP = 0;
+        playerData.MS = 8; 
+        playerData.HP = 100;
+        playerData.StartMoney = 150;
+        j_upgrateData = new UpgradeData();
+        j_upgrateData.MSCost = 0;
+        j_upgrateData.HPCost = 0;
+        j_upgrateData.BMCost = 0;
+
+        string jsonP = JsonUtility.ToJson(playerData, true);
+        string jsonU = JsonUtility.ToJson(j_upgrateData, true);
+        string pathP = Path.Combine(Application.persistentDataPath, "playerData.json");
+        string pathU = Path.Combine(Application.persistentDataPath, "upgrateData.json");
+
+        File.WriteAllText(pathP, jsonP); // Запись JSON строки в файл
+        Debug.Log("Данные сохранены в: " + pathP);
+        File.WriteAllText(pathU, jsonU); // Запись JSON строки в файл
+        Debug.Log("Данные сохранены в: " + pathU);
     }
 }
