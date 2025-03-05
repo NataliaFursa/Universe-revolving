@@ -12,7 +12,7 @@ public class Upgrade : MonoBehaviour
     public int MSCost { get => 100+ (150*m_MSCost); }
     public void MSUpdate()
     {
-        if ((Meta.PlayerXP >= (100+ (150*m_MSCost))) || (m_MSCost < MSMaxlvl))
+        if ((Meta.PlayerXP >= (100+ (150*m_MSCost))) && (m_MSCost < MSMaxlvl))
         {
             Meta.PlayerXP -= 100 + (150*m_MSCost);
             m_MSCost += 1;
@@ -31,7 +31,7 @@ public class Upgrade : MonoBehaviour
     public int HPCost { get => 100+ (100*m_HPCost); }
     public void HPUpdate()
     {
-        if ((Meta.PlayerXP >= 100+ (100*m_HPCost)) || (m_HPCost < HPMaxlvl))
+        if ((Meta.PlayerXP >= 100+ (100*m_HPCost)) && (m_HPCost < HPMaxlvl))
         {
             Meta.PlayerXP -= 100+ (100*m_HPCost);
             m_HPCost += 1;
@@ -50,7 +50,7 @@ public class Upgrade : MonoBehaviour
     public int BMCost { get => 250+ (250*m_BMCost); }
     public void BMUpdate()
     {
-        if ((Meta.PlayerXP >= 250+ (250*m_BMCost)) || (m_BMCost < BMMaxlvl))
+        if ((Meta.PlayerXP >= 250+ (250*m_BMCost)) && (m_BMCost < BMMaxlvl))
         {
             Meta.PlayerXP -= 250+ (250*m_BMCost);
             m_BMCost += 1;
