@@ -69,7 +69,7 @@ public class WeaponLego : MonoBehaviour
     
     public void GetDamage()
     {
-        totalDamage = 20 * scope.part.damageRate * magazine.part.damageRate * receiver.part.damageRate;
+        totalDamage = 15 * scope.part.damageRate * magazine.part.damageRate * receiver.part.damageRate;
     }
     public void Drop(Item item)
     {
