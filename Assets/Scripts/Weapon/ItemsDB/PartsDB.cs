@@ -31,8 +31,9 @@ public class PartsDB : ScriptableObject
                     rarityItemList.Add(item);
                 }
             }
-            if(rarityItemList.Count > 0) { ok = true; }
+            if (rarityItemList.Count > 0) { ok = true; }
             else { rarity -= 1; }
+            if(rarity < 0) { return items[0]; }
         }
         int randomIndex = UnityEngine.Random.Range(0, rarityItemList.Count);
         Debug.Log($"list size: {rarityItemList.Count}\nselect index: {randomIndex}\nRequired rarity {rarity}");
