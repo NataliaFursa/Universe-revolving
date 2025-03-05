@@ -4,10 +4,24 @@ using UnityEngine;
 public class PickUpInformationWithPrice : PickupInformation_Table
 {
     [SerializeField] TextMeshProUGUI price_text;
-
-    public void SetPrice(int price)
+    [SerializeField] PartPickUpWithPrice partPickUpWithPrice;
+    
+    private void Start()
     {
-        string priceString = $"Price: \n{price.ToString()}";
+        RefreshInformation();
+        SetPrice();
+    }
+
+    private void OnEnable()
+    {
+         RefreshInformation();
+        SetPrice();
+    }
+
+    public void SetPrice()
+    {
+        var price = partPickUpWithPrice.Price;
+        string priceString = $"Цена: {price.ToString()}";
         price_text.text = priceString;
     }
 }

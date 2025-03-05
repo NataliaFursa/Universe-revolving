@@ -8,28 +8,28 @@ public class Weapon : MonoBehaviour
 {
     enum State { Idle, Fire, Reload }
     private State m_state = State.Idle;
-    public Transform m_muzzle;  
+    public Transform m_muzzle;
     public Projectile bulletPrefab;
     private Coroutine m_fireCoroutine;
     private int ammo;
     private WeaponLego lego;
     public float Damage = 20;
-    
 
-    public Action onShoot; 
+
+    public Action onShoot;
     public Action onReloadStart;
     public Action onReloadEnd;
 
     public int Ammo { get => ammo; }
     public int MaxAmmo = 228;
-    public WeaponLego weaponLegoValue =>lego;
+    public WeaponLego weaponLegoValue => lego;
     public LayerMask hitLayer;
     public LineRenderer lineRenderer;
 
     public void Awake()
     {
         lego = GetComponent<WeaponLego>();
-        var partM = lego.magazine.part as Magazine; 
+        var partM = lego.magazine.part as Magazine;
         ammo = partM.cage;
         MaxAmmo = partM.cage;
         if (lineRenderer == null)
@@ -43,16 +43,17 @@ public class Weapon : MonoBehaviour
         }
         hitLayer = ~LayerMask.GetMask("Default");
     }
-    
+
     public void ToDefault()
     {
         lego = GetComponent<WeaponLego>();
         lego.ToDefault();
     }
-    
+
     public void Pickup(Item item)
     {
         lego.Pickup(item);
+        Reload();
     }
     public void GoBase()
     {
@@ -61,7 +62,7 @@ public class Weapon : MonoBehaviour
 
     public void Reload()
     {
-        var partM = lego.magazine.part as Magazine; 
+        var partM = lego.magazine.part as Magazine;
         if (ammo != partM.cage && (m_state == State.Fire || m_state == State.Idle))
         {
             //Debug.Log($"перезарядка");
@@ -78,7 +79,7 @@ public class Weapon : MonoBehaviour
     }
     private IEnumerator ReloadDelay()
     {
-        var partM = lego.magazine.part as Magazine; 
+        var partM = lego.magazine.part as Magazine;
         yield return new WaitForSeconds(partM.recharge);
         ammo = partM.cage;
         onReloadEnd?.Invoke();
@@ -91,7 +92,7 @@ public class Weapon : MonoBehaviour
             Reload();
             return;
         }
-        
+
         if (m_state == State.Idle)
         {
             m_state = State.Fire;
@@ -101,17 +102,17 @@ public class Weapon : MonoBehaviour
 
     private IEnumerator FireDelay()
     {
-        var partR = lego.receiver.part as Receiver; 
+        var partR = lego.receiver.part as Receiver;
         do
         {
             Shoot();
             yield return new WaitForSeconds(partR.delay);
         }
-        while(true);
+        while (true);
     }
     private IEnumerator PostFireDelay()
     {
-        var partR = lego.receiver.part as Receiver; 
+        var partR = lego.receiver.part as Receiver;
         yield return new WaitForSeconds(partR.delay);
         m_state = State.Idle;
     }
@@ -137,16 +138,16 @@ public class Weapon : MonoBehaviour
             Debug.Log($"SHOOTammo - {ammo}");
             ShootAction();
         }
-         BulletCounter();
+        BulletCounter();
     }
 
     public void BulletCounter()
     {
         if (ammo > 0)
         {
-        ammo = ammo - 1;
-        onShoot?.Invoke();
-        Debug.Log($"ammo - {ammo}");
+            ammo = ammo - 1;
+            onShoot?.Invoke();
+            Debug.Log($"ammo - {ammo}");
         }
         else
         {
@@ -156,34 +157,39 @@ public class Weapon : MonoBehaviour
 
     public void ShootAction()
     {
-        var partM = lego.magazine.part as Magazine; 
-        var partR = lego.receiver.part as Receiver; 
+        var partM = lego.magazine.part as Magazine;
+        var partR = lego.receiver.part as Receiver;
         var partS = lego.scope.part as Scope;
         if (partR.LegendaryMod == "") ShootBullet(partM, partR, partS);
         if (partR.LegendaryMod == "Ray") ShootRay(partM, partR, partS);
-    
+
     }
 
     public void ShootBullet(Magazine partM, Receiver partR, Scope partS)
     {
+        var spread = partS.spread;
+        if (partR.volume > 1)
+        {
+            spread = spread * partR.volume * 2;
+        }
         for (int i = 1; i <= partR.volume; i++)
         {
-        Projectile bullet = Instantiate(bulletPrefab, m_muzzle.position, m_muzzle.rotation);
+            Projectile bullet = Instantiate(bulletPrefab, m_muzzle.position, m_muzzle.rotation);
 
-        Projectile projectileScript = bullet.GetComponent<Projectile>();
-        if (projectileScript != null)
-        {
-            projectileScript.maxDistance = partS.range;
-            projectileScript.damage = lego.totalDamage; 
-        }
-        
-        Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        if (rb != null)
-        {
-            float randomSpreadY = UnityEngine.Random.Range(-partS.spread, partS.spread);
-            Vector3 spreadDirection = Quaternion.Euler(0, randomSpreadY, 0) * m_muzzle.forward;
-            rb.AddForce(spreadDirection.normalized * partR.force, ForceMode.Impulse);
-        }
+            Projectile projectileScript = bullet.GetComponent<Projectile>();
+            if (projectileScript != null)
+            {
+                projectileScript.maxDistance = partS.range;
+                projectileScript.damage = lego.totalDamage;
+            }
+
+            Rigidbody rb = bullet.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                float randomSpreadY = UnityEngine.Random.Range(-spread, spread);
+                Vector3 spreadDirection = Quaternion.Euler(0, randomSpreadY, 0) * m_muzzle.forward;
+                rb.AddForce(spreadDirection.normalized * partR.force, ForceMode.Impulse);
+            }
         }
     }
     public void ShootRay(Magazine partM, Receiver partR, Scope partS)

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   <model>k__BackingField: {fileID: 4788877819812157643, guid: 2efc489f43e13ca41a08408b4ff4494a, type: 3}
-  <damageRate>k__BackingField: 1
-  <delay>k__BackingField: 0.1
+  <damageRate>k__BackingField: 0.9
+  <delay>k__BackingField: 0.7
   <force>k__BackingField: 15
-  <volume>k__BackingField: 1
-  <times>k__BackingField: 1
+  <volume>k__BackingField: 5
+  <LegendaryMod>k__BackingField: 

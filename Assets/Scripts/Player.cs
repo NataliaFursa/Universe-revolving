@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     MeleePunch m_meleePunch;
     WeaponManager m_weaponManager;
     PlayerStats m_stats;
+    public PlayerStats statsValue => m_stats;
     public WeaponManager weaponManagerValue => m_weaponManager;
     PlayerAnimationManager m_animator;
     //SkillManager m_skillManager;
