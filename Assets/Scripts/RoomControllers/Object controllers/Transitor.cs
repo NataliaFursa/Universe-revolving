@@ -18,11 +18,11 @@ public class Transitor : IInteractable
     public void Initiate(Room room, int roomInd, Icons levelIcons)
     {
         this.levelIcons = levelIcons;
-        if (doorController != null)
+        if (doorController == null)
         {
             doorController = GetComponent<DoorsAnimationController>();
         }
-        if (portalController != null)
+        if (portalController == null)
         {
             portalController = GetComponent<ParticlePortalAnimationController>();
         }
@@ -72,7 +72,7 @@ public class Transitor : IInteractable
         }
         else
         {
-            AddIcon(levelIcons.restRoom);
+            AddIcon(levelIcons.nextLevel);
         }
         if (doorController != null)
         {

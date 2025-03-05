@@ -181,6 +181,7 @@ MonoBehaviour:
   - {fileID: 1999626219126641349}
   - {fileID: 5095995277612009228}
   rewardContainer: {fileID: 5768822168999035467, guid: 17caa59363936494a86f09d691879c18, type: 3}
+  xpReward: 50
   waves:
   - {fileID: 2560799352340491411}
   - {fileID: 6883291609683274948}

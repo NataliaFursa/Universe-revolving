@@ -9,4 +9,5 @@ public class Icons : ScriptableObject
     public Texture rewardRoom;
     public Texture restRoom;
     public Texture bossRoom;
+    public Texture nextLevel;
 }

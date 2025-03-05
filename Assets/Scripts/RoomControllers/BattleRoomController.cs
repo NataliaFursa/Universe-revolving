@@ -17,7 +17,7 @@ public class BattleRoomController : RoomController
     public List<SubList> enemies = new List<SubList>();
     private List<List<Enemy>> enemyList;
     */
-
+    [SerializeField] int xpReward;
     [SerializeField] private List<Wave> waves;
     [SerializeField] private GameObject enemySpawnDisplayObject;
 
@@ -109,6 +109,7 @@ public class BattleRoomController : RoomController
                 //Тут нужно сделать более сложную логику открытия и закрытию проходов
                 activeTransitions[i].Enable();
             }
+            Meta.PlayerXP += xpReward;
         }
         else
         {
@@ -117,11 +118,13 @@ public class BattleRoomController : RoomController
                 //Тут нужно сделать более сложную логику открытия и закрытию проходов
                 activeTransitions[i].Enable();
             }
+            Meta.PlayerXP += xpReward;
         }
         if (rewardContainer != null)
         {
             Instantiate(rewardContainer, rewardSpawnPosition);
         }
+        
     }
 
     public virtual void AddEnemy(Enemy enemy)

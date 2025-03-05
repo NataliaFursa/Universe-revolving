@@ -7,4 +7,9 @@ public class MenuUIController : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    public void StartDemo()
+    {
+        SceneManager.LoadScene(4);
+    }
 }

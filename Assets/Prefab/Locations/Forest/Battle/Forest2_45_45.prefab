@@ -1549,6 +1549,7 @@ MonoBehaviour:
   - {fileID: 3969633269809708747}
   - {fileID: 6924797538583737594}
   rewardContainer: {fileID: 5768822168999035467, guid: 17caa59363936494a86f09d691879c18, type: 3}
+  xpReward: 50
   waves:
   - {fileID: 6938823210486725476}
   enemySpawnDisplayObject: {fileID: 4129445043865457264, guid: 315cafa863fbac5478cb4cdb584e9eeb, type: 3}

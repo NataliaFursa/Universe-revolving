@@ -1886,7 +1886,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bed79e7d579942c6a1ce3c532245540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  states: {fileID: 7147991542931810775}
 --- !u!1 &2326869085219589776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,9 +1930,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4678d690b0106b4fa088734b6b9508f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rootUI: {fileID: 3224855618452812489}
-  gamePlayState: {fileID: 4862278415637545}
-  openMenuState: {fileID: 3891808536340460883}
 --- !u!1 &2600756461539341854
 GameObject:
   m_ObjectHideFlags: 0
@@ -2812,14 +2808,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 164658fa022b548e4a59e1315b07aaea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseState: {fileID: 4853804476838461135}
-  openMenuState: {fileID: 3891808536340460883}
-  rootUI: {fileID: 3042087034013575850}
   musicMixer: {fileID: 5915320831170544456, guid: ed80db81287014b3fbe9ecb55be78c0c, type: 2}
   soundMixer: {fileID: -3045463548302219824, guid: ed80db81287014b3fbe9ecb55be78c0c, type: 2}
   musicVolumeSlider: {fileID: 7687129514027451603}
   soundVolumeSlider: {fileID: 7143971403841716750}
-  previousState: {fileID: 0}
 --- !u!1 &3047688874682308666
 GameObject:
   m_ObjectHideFlags: 0
@@ -3858,7 +3850,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3e3434bc7dadce40866bfdd8a1dd7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rootUI: {fileID: 3941041857896836911}
 --- !u!1 &3941041857896836911
 GameObject:
   m_ObjectHideFlags: 0
@@ -5169,9 +5160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d36e054494842969b8476c840d54ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameplayState: {fileID: 4862278415637545}
   playerController: {fileID: 0}
-  rootUI: {fileID: 5732302448210839670}
 --- !u!1 &5266218996376623040
 GameObject:
   m_ObjectHideFlags: 0
@@ -5709,12 +5698,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b87681c9c33b7641b9778b3101d4add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamePlayState: {fileID: 4862278415637545}
-  openMenuState: {fileID: 3891808536340460883}
-  settingsState: {fileID: 5923967044657899550}
   playerController: {fileID: 0}
   cameraController: {fileID: 0}
-  rootUI: {fileID: 4160948130393380551}
+  inputActions: {fileID: 0}
 --- !u!1 &5973151212760640397
 GameObject:
   m_ObjectHideFlags: 0
@@ -7016,16 +7002,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa17c53d0b8bca94cb1091c14b0f3ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseState: {fileID: 4853804476838461135}
-  openMenuState: {fileID: 3891808536340460883}
-  levelEndState: {fileID: 3414823484719776182}
-  deathState: {fileID: 8152731254103867355}
   inputActions: {fileID: -944628639613478452, guid: 3f87c757bb72f2747999e6033be77070, type: 3}
-  inventoryState: {fileID: 7049012063759316291}
   playerController: {fileID: 0}
   cameraController: {fileID: 0}
   player: {fileID: 0}
-  rootUI: {fileID: 2681905430738892508}
 --- !u!114 &6324844711982193477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7039,9 +7019,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownColor: {r: 0.3882353, g: 0.3882353, b: 0.3882353, a: 1}
-  healingSkill: {fileID: 0}
+  durationSlider: {fileID: 0}
   healingTimerText: {fileID: 3528993628113708107}
   healingSkillIcon: {fileID: 100366451694432349}
+  boostTimerText: {fileID: 0}
+  boostSkillIcon: {fileID: 0}
 --- !u!114 &5124546801399968500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7055,7 +7037,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammoText: {fileID: 7514649720072536194}
-  m_currentWeapon: {fileID: 0}
 --- !u!1 &7518905942700567461
 GameObject:
   m_ObjectHideFlags: 0
@@ -7313,10 +7294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1905c72f770a1ac4989fcb987f988036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameplayState: {fileID: 4862278415637545}
-  settingsState: {fileID: 5923967044657899550}
   inputActions: {fileID: -944628639613478452, guid: 3f87c757bb72f2747999e6033be77070, type: 3}
-  rootUI: {fileID: 858299260404158709}
 --- !u!1 &8116301203078754692
 GameObject:
   m_ObjectHideFlags: 0

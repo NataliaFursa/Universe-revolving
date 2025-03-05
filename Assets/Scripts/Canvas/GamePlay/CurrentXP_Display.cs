@@ -27,17 +27,14 @@ public class CurrentXP_Display : MonoBehaviour
 
     private void OnChangeXP()
     {
-        RefreshXPInfo(playerStats);
+        RefreshXPInfo();
     }
 
-    private void RefreshXPInfo(PlayerStats playerStats)
+    public void RefreshXPInfo()
     {
-        if (playerStats)
+        foreach (var xp_text in XPText)
         {
-            foreach (var xp_text in XPText)
-            {
-                xp_text.text = $"Progress: {playerStats.currentXP}";
-            }
+            xp_text.text = $"XP: {Meta.PlayerXP}";
         }
     }
 }

@@ -12,7 +12,7 @@ public class UIConfigurator : MonoBehaviour
     [SerializeField] private CurrentXP_Display currentXP_Display;
 
 
-    public void ConfigureWeaponCageManager(Player player)
+    public void ConfigureUI(Player player)
     {
         if (weaponCageManager != null)
         {
@@ -22,8 +22,14 @@ public class UIConfigurator : MonoBehaviour
             uI_Inventory.SetPlayer(player);
             moneyCounterDisplay.SetPlayer(player);
             currentXP_Display.SetPlayer(player);
+            
+            UpdateXP();
         }
+    }
 
+    public void UpdateXP()
+    {
+        currentXP_Display.RefreshXPInfo();
     }
 }
 
