@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 7812379479966753627, guid: cef1fa819dc244be9b052312676143a6, type: 3}
   roomName: ForestBattle3
-  weight: 1
+  weight: 3

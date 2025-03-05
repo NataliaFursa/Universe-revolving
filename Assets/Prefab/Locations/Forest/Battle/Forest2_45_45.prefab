@@ -628,7 +628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1912251229178300632
 Transform:
   m_ObjectHideFlags: 0
@@ -661,6 +661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesList: []
+  pickUpList: []
 --- !u!1 &3198562038355126647
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,6 +2159,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mag_Melee
       objectReference: {fileID: 0}
+    - target: {fileID: 4361790575989413815, guid: 821a2be1de410467eb2efc194efbdb81, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.632
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361790575989413815, guid: 821a2be1de410467eb2efc194efbdb81, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361790575989413815, guid: 821a2be1de410467eb2efc194efbdb81, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.632
+      objectReference: {fileID: 0}
     - target: {fileID: 4522260291586155201, guid: 821a2be1de410467eb2efc194efbdb81, type: 3}
       propertyPath: m_LocalPosition.x
       value: 66.347084
@@ -2200,11 +2213,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4704255514004209606, guid: 821a2be1de410467eb2efc194efbdb81, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.632
       objectReference: {fileID: 0}
     - target: {fileID: 4704255514004209606, guid: 821a2be1de410467eb2efc194efbdb81, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3179,11 +3192,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 147742053189568658, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.632
       objectReference: {fileID: 0}
     - target: {fileID: 147742053189568658, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2367599636091972849, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3224,6 +3237,18 @@ PrefabInstance:
     - target: {fileID: 2367599636091972849, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512323230369186873, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.632
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512323230369186873, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512323230369186873, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.632
       objectReference: {fileID: 0}
     - target: {fileID: 7989339063144909378, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
       propertyPath: m_Name
@@ -4550,11 +4575,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 147742053189568658, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.632
       objectReference: {fileID: 0}
     - target: {fileID: 147742053189568658, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2367599636091972849, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4596,6 +4621,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5512323230369186873, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.632
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512323230369186873, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512323230369186873, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.632
+      objectReference: {fileID: 0}
     - target: {fileID: 7989339063144909378, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
       propertyPath: m_Name
       value: GolemBlue_Melee  (1)
@@ -4620,11 +4657,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 147742053189568658, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.632
       objectReference: {fileID: 0}
     - target: {fileID: 147742053189568658, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2367599636091972849, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4665,6 +4702,18 @@ PrefabInstance:
     - target: {fileID: 2367599636091972849, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512323230369186873, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.632
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512323230369186873, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512323230369186873, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.632
       objectReference: {fileID: 0}
     - target: {fileID: 7989339063144909378, guid: 93d9c7ac0571c4b67a39bc5f94c553d4, type: 3}
       propertyPath: m_Name

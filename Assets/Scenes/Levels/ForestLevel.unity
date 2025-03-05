@@ -214,12 +214,12 @@ MonoBehaviour:
   levelSize: 5
   minRoomCountPerLayer: 2
   maxRoomCountPerLayer: 4
-  fixedShopLevel: 1
+  fixedShopLevel: 3
   shopSoloLayer: 1
   rewardRoomsPerLevel: 1
   shopRoomsPerLevel: 0
-  restRoomsPerLevel: 0
-  UniqueRooms: 0
+  restRoomsPerLevel: 1
+  UniqueRooms: 1
   startRoom: {fileID: 11400000, guid: a676e16b2b68e744587de7e3d9901cf5, type: 2}
   battleRoomList:
   - {fileID: 11400000, guid: 522ddb255a7eba4479604888771a69f6, type: 2}
@@ -630,6 +630,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1336661963188942817, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1336661963188942817, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1938498991796240786, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.074895
@@ -720,6 +728,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5799067624038247811, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6233401430094885525, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6619954583323122380, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}

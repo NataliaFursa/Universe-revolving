@@ -650,6 +650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesList: []
+  pickUpList: []
 --- !u!1 &3819679366161587871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,6 +1266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesList: []
+  pickUpList: []
 --- !u!1 &6319942092781797177
 GameObject:
   m_ObjectHideFlags: 0

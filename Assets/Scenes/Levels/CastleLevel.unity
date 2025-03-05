@@ -308,14 +308,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6311ee93bd27fde4c9a83ee4a93088a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSize: 7
-  minRoomCountPerLayer: 1
+  levelSize: 5
+  minRoomCountPerLayer: 2
   maxRoomCountPerLayer: 4
-  fixedShopLevel: 3
-  shopSoloLayer: 1
+  fixedShopLevel: 4
+  shopSoloLayer: 0
   rewardRoomsPerLevel: 1
   shopRoomsPerLevel: 0
-  restRoomsPerLevel: 0
+  restRoomsPerLevel: 2
   UniqueRooms: 1
   startRoom: {fileID: 11400000, guid: a5a23f9145252f3438faeabd8c65651f, type: 2}
   battleRoomList:
@@ -676,10 +676,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 341522865814840682, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 767842367855083335, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
       propertyPath: playerController
       value: 
       objectReference: {fileID: 332749922}
+    - target: {fileID: 893369086662866001, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893369086662866001, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893369086662866001, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1336661963188942817, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1336661963188942817, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1938498991796240786, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.074895
@@ -720,9 +744,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2488138240081288725, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488138240081288725, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488138240081288725, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168656456166978596, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168656456166978596, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4128540327974825222, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
       propertyPath: m_Name
       value: GamePlayMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787896616733806963, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799067624038247811, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799067624038247811, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6233401430094885525, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6619954583323122380, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
       propertyPath: levelController
