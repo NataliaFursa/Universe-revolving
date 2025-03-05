@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ParticlePortalAnimationController : MonoBehaviour
 {
-    private ParticleSystem portalParticle;
+    [SerializeField] private ParticleSystem portalParticle;
     private void Awake()
     {
         portalParticle = GetComponent<ParticleSystem>();
@@ -17,18 +17,18 @@ public class ParticlePortalAnimationController : MonoBehaviour
     private void OnEnable()
     {
 
-        // += HandlePlayerShoot;
+        // += ActivatePortal;
 
     }
 
     private void OnDisable()
     {
 
-        // -= HandlePlayerShoot;
+        // -= ActivatePortal;
 
     }
 
-    private void HandlePlayerShoot()
+    public void ActivatePortal()
     {
         if (portalParticle != null)
         {

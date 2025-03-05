@@ -11,13 +11,21 @@ public class Transitor : IInteractable
     public Action onFinalActivate;
     private Canvas iconCanvas;
     private DoorsAnimationController doorController;
+    private ParticlePortalAnimationController portalController;
     private bool isActive = false;
     private Icons levelIcons;
 
     public void Initiate(Room room, int roomInd, Icons levelIcons)
     {
         this.levelIcons = levelIcons;
-        doorController = GetComponent<DoorsAnimationController>();
+        if (doorController != null)
+        {
+            doorController = GetComponent<DoorsAnimationController>();
+        }
+        if (portalController != null)
+        {
+            portalController = GetComponent<ParticlePortalAnimationController>();
+        }
         iconCanvas = GetComponentInChildren<Canvas>();
         roomSO = room;
         targetInd = roomInd;
@@ -45,7 +53,7 @@ public class Transitor : IInteractable
         Color col = iconImage.color;
         col.a = 1;
         iconImage.color = col;
-        
+
     }
 
     public void Enable()
@@ -66,13 +74,20 @@ public class Transitor : IInteractable
         {
             AddIcon(levelIcons.restRoom);
         }
-        doorController.OpenDoorsAnimation();
+        if (doorController != null)
+        {
+            doorController.OpenDoorsAnimation();
+        }
+        if (portalController != null)
+        {
+            portalController.ActivatePortal();
+        }
         isActive = true;
     }
 
     override public void Interact()
     {
-        if(isActive) Activate();
+        if (isActive) Activate();
     }
 
     private void Activate()
@@ -83,7 +98,7 @@ public class Transitor : IInteractable
         }
         else
         {
-            if(onFinalActivate != null)
+            if (onFinalActivate != null)
             {
                 onFinalActivate.Invoke();
             }
