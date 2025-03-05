@@ -48,7 +48,7 @@ public class SkillCooldownDisplay : MonoBehaviour
         originalColor = boostSkillIcon.color;
     }
 
-
+    /*
     private void OnDisable()
     {
         if (healingSkill != null)
@@ -62,8 +62,8 @@ public class SkillCooldownDisplay : MonoBehaviour
             boostSkill.onCooldownTick -= UpdateBoostCooldownText;
             boostSkill.onCooldownComplete -= ClearBoostCooldownText;
         }
-
     }
+    */
 
 
     private void UpdateHealingCooldownText(float remainingTime)

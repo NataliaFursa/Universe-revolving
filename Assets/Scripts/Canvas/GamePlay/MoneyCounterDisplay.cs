@@ -18,6 +18,7 @@ public class MoneyCounterDisplay : MonoBehaviour
         }
     }
 
+    /*
     private void OnDisable()
     {
         if (playerStats)
@@ -25,6 +26,7 @@ public class MoneyCounterDisplay : MonoBehaviour
             playerStats.onChangeMoneyValue -= OnChangeMoney;
         }
     }
+    */
 
 
     private void OnChangeMoney()
