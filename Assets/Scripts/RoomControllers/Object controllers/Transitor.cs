@@ -76,7 +76,7 @@ public class Transitor : IInteractable
         }
         if (doorController != null)
         {
-            doorController.OpenDoorsAnimation();
+            doorController.Activate();
         }
         if (portalController != null)
         {

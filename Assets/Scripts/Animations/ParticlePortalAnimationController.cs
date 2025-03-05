@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ParticlePortalAnimationController : MonoBehaviour
+public class ParticlePortalAnimationController : DoorsAnimationController
 {
     [SerializeField] private ParticleSystem portalParticle;
     private void Awake()
@@ -14,18 +14,9 @@ public class ParticlePortalAnimationController : MonoBehaviour
         }
     }
 
-    private void OnEnable()
+    override public void Activate()
     {
-
-        // += ActivatePortal;
-
-    }
-
-    private void OnDisable()
-    {
-
-        // -= ActivatePortal;
-
+        ActivatePortal();        
     }
 
     public void ActivatePortal()
