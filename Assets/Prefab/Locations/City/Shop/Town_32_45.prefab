@@ -1473,7 +1473,7 @@ MonoBehaviour:
   commonChance: 90
   rareChance: 60
   epicChance: 30
-  legendaryChance: 5
+  legendaryChance: 20
 --- !u!1 &6324678520238910140
 GameObject:
   m_ObjectHideFlags: 0
