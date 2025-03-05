@@ -1419,7 +1419,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 3, z: 1}
+  m_Size: {x: 3, y: 3, z: 2}
   m_Center: {x: 0, y: 2, z: 0.7}
 --- !u!1 &4058422305800842274
 GameObject:
@@ -2569,7 +2569,7 @@ NavMeshAgent:
   m_Acceleration: 30
   avoidancePriority: 0
   m_AngularSpeed: 120
-  m_StoppingDistance: 3
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -2707,7 +2707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af9019e781e98f54a9503cd47485b3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 120
+  maxHealth: 100
 --- !u!1 &8154195047820525237
 GameObject:
   m_ObjectHideFlags: 0
