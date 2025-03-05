@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 305887585720358952}
-  - component: {fileID: 946779071601183123}
   m_Layer: 0
   m_Name: Environment
   m_TagString: Untagged
@@ -43,26 +42,6 @@ Transform:
   - {fileID: 1005929043845837041}
   m_Father: {fileID: 6609829300235661360}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &946779071601183123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 27399845214424244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_OverrideArea: 1
-  m_Area: 1
-  m_OverrideGenerateLinks: 0
-  m_GenerateLinks: 0
-  m_IgnoreFromBuild: 0
-  m_ApplyToChildren: 1
-  m_AffectedAgents: ffffffff
 --- !u!1 &540726795763939962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,6 +1184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesList: []
+  pickUpList: []
 --- !u!1 &5240282145415571614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,7 +1458,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: d71b5a710023cce4280bddb59b66a77c, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 00d2c451a0114c54ab3ad99a5ef95113, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &6171340631802903631
 GameObject:
@@ -1726,6 +1706,7 @@ MonoBehaviour:
   - {fileID: 9204941467716644868}
   - {fileID: 7937471209019400680}
   rewardContainer: {fileID: 5768822168999035467, guid: 17caa59363936494a86f09d691879c18, type: 3}
+  xpReward: 75
   waves:
   - {fileID: 345784594794225689}
   enemySpawnDisplayObject: {fileID: 4129445043865457264, guid: 315cafa863fbac5478cb4cdb584e9eeb, type: 3}

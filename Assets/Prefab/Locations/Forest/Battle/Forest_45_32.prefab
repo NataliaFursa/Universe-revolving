@@ -215,6 +215,7 @@ MonoBehaviour:
   - {fileID: 8200809568341751553}
   - {fileID: 2231222046530215087}
   rewardContainer: {fileID: 5768822168999035467, guid: 17caa59363936494a86f09d691879c18, type: 3}
+  xpReward: 50
   waves:
   - {fileID: 1422080260282874008}
   - {fileID: 2003973505419406855}
@@ -1683,6 +1684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesList: []
+  pickUpList: []
 --- !u!1 &6666120210849580236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1804,6 +1806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesList: []
+  pickUpList: []
 --- !u!1 &7750565916549092141
 GameObject:
   m_ObjectHideFlags: 0

@@ -50,12 +50,12 @@ public class LevelController : MonoBehaviour
             cameraController.SetTarget(playerGO);
             playerController.SetPlayer(player);
         }
+        uiConfigurator.ConfigureUI(player);
         mapGenerator = GetComponent<MapGenerator>();
     }
 
     private void Start()
-    {
-        uiConfigurator.ConfigureWeaponCageManager(player);
+    {   
         UpdateMap();
         InstantLoad();
         screenFade.StartFadeIn();

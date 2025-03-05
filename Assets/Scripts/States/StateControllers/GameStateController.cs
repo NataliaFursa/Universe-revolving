@@ -6,6 +6,7 @@ public class GameStateController : StateController
 {
     [SerializeField] PlayerController playerController;
     [SerializeField] LevelController levelController;
+    [SerializeField] UIConfigurator uiConfigurator;
     private void Awake()
     {
         m_stateActivator = new StateActivator();
@@ -29,6 +30,7 @@ public class GameStateController : StateController
 
     public void OnEscButton()
     {
+        uiConfigurator.UpdateXP();
         if (!((m_stateActivator.current is PauseState) || (m_stateActivator.current is InventoryState) || (m_stateActivator.current is SettingsState)))
         {
             m_stateActivator.Push<PauseState>();
@@ -44,6 +46,7 @@ public class GameStateController : StateController
     }
     public void GoToEndLevel()
     {
+        uiConfigurator.UpdateXP();
         m_stateActivator.Push<LevelEndState>();
     }
     public void GoToSettings()
@@ -64,11 +67,13 @@ public class GameStateController : StateController
     }
     public void GoToDeath()
     {
+        uiConfigurator.UpdateXP();
         m_stateActivator.Push<DeathState>();
     }
 
     public void GoToRunEnd()
     {
+        uiConfigurator.UpdateXP();
         m_stateActivator.Push<RunEndState>();
     }
 

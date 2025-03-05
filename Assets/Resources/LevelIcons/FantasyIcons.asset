@@ -17,3 +17,4 @@ MonoBehaviour:
   rewardRoom: {fileID: 2800000, guid: 6f5876f18970e4c608e2556f294826ed, type: 3}
   restRoom: {fileID: 2800000, guid: 23ae28dc5a64540508122bdcb1a9cf0b, type: 3}
   bossRoom: {fileID: 2800000, guid: ed597adb971d94945b815a87b9323ccd, type: 3}
+  nextLevel: {fileID: 2800000, guid: 82d8b044453274fe18ffd7fa4c74f0d8, type: 3}

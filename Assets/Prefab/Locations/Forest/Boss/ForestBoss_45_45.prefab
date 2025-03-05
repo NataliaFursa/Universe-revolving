@@ -51,6 +51,7 @@ MonoBehaviour:
   closeTransitions:
   - {fileID: 7353421532615367281}
   rewardContainer: {fileID: 6446448641095563528, guid: 8ad0a03afc0a73c4cb99f772ae417039, type: 3}
+  xpReward: 100
   waves:
   - {fileID: 7207437049885092542}
   - {fileID: 5545933808076074880}
@@ -792,6 +793,7 @@ MonoBehaviour:
   - {fileID: 5908211485796690167}
   - {fileID: 0}
   - {fileID: 2382126732813771975}
+  pickUpList: []
 --- !u!1 &4784130956633716100
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,6 +996,7 @@ MonoBehaviour:
   - {fileID: 1771655284211757298}
   - {fileID: 2285775611748602909}
   - {fileID: 3876921308155944423}
+  pickUpList: []
 --- !u!1 &5870973591252053433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,6 +1360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesList: []
+  pickUpList: []
 --- !u!1 &7353421532615367281
 GameObject:
   m_ObjectHideFlags: 0

@@ -869,7 +869,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 1b36f86281c1cb94fbf4a0c81749ab98, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: ac269eb51952060439bed3c6b261414f, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1563476967532911974
 GameObject:
@@ -928,6 +928,7 @@ MonoBehaviour:
   - {fileID: 8398057678377202928}
   - {fileID: 4725694553374284222}
   rewardContainer: {fileID: 5768822168999035467, guid: 17caa59363936494a86f09d691879c18, type: 3}
+  xpReward: 100
   waves:
   - {fileID: 1535241531088185489}
   enemySpawnDisplayObject: {fileID: 4129445043865457264, guid: 315cafa863fbac5478cb4cdb584e9eeb, type: 3}
@@ -4211,6 +4212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesList: []
+  pickUpList: []
 --- !u!1 &7691694681959087526
 GameObject:
   m_ObjectHideFlags: 0

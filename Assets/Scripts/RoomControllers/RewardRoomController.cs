@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class RewardRoomController : RoomController
@@ -9,7 +10,11 @@ public class RewardRoomController : RoomController
     {
         if (reward != null)
         {
-            Instantiate(reward, roomRewardSpawnPosition);
+            try
+            {
+                Instantiate(reward, roomRewardSpawnPosition);
+            }
+            catch { }
             reward.onOpen += OnContainerOpen;
         }
         else

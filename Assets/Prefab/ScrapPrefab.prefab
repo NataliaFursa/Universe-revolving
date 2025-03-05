@@ -5487,7 +5487,7 @@ GameObject:
   - component: {fileID: 1790228700488916999}
   m_Layer: 0
   m_Name: ScrapPrefab
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

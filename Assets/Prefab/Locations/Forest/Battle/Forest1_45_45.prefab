@@ -1106,6 +1106,7 @@ MonoBehaviour:
   - {fileID: 7577846093899412633}
   - {fileID: 5429452227588065638}
   rewardContainer: {fileID: 5768822168999035467, guid: 17caa59363936494a86f09d691879c18, type: 3}
+  xpReward: 60
   waves:
   - {fileID: 3167513573370093355}
   - {fileID: 2699223282710571080}
