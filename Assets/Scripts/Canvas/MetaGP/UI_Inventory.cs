@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class UI_Inventory : MonoBehaviour
 {
-    [SerializeField] LevelController levelController;
+    [SerializeField] Player player;
 
     private UI_InventorySlot[] slots;
     private UI_InventorySlot scope_slot;
@@ -16,20 +16,23 @@ public class UI_Inventory : MonoBehaviour
 
 
     private TextMeshProUGUI[] texts;
-    private TextMeshProUGUI name_text;
-    private TextMeshProUGUI type_text;
-    private TextMeshProUGUI description_text;
-    private TextMeshProUGUI сharacteristics_text;
+    [SerializeField] private TextMeshProUGUI name_text;
+    [SerializeField] private TextMeshProUGUI type_text;
+    [SerializeField] private TextMeshProUGUI description_text;
+    [SerializeField] private TextMeshProUGUI сharacteristics_text;
 
 
     private Item scope;
     private Item magazine;
     private Item reciever;
-
+    
+    public void SetPlayer(Player playerValue)
+    {
+        player = playerValue;
+    }
 
     private void Awake()
     {
-        texts = GetComponentsInChildren<TextMeshProUGUI>(true);
         slots = GetComponentsInChildren<UI_InventorySlot>(true);
     }
 
@@ -60,22 +63,19 @@ public class UI_Inventory : MonoBehaviour
         scope_slot = slots[0];
         magazine_slot = slots[1];
         reciever_slot = slots[2];
-
-        name_text = texts[0];
-        type_text = texts[1];
-        description_text = texts[2];
-        сharacteristics_text = texts[3];
     }
     private void RefreshInventory()
     {
-        scope = levelController.playerValue.weaponManagerValue.weaponValue.weaponLegoValue.scopeValue;
-        magazine = levelController.playerValue.weaponManagerValue.weaponValue.weaponLegoValue.magazineValue;
-        reciever = levelController.playerValue.weaponManagerValue.weaponValue.weaponLegoValue.receiverValue;
+        scope = player.weaponManagerValue?.weaponValue?.weaponLegoValue?.scopeValue;
+        magazine = player.weaponManagerValue?.weaponValue?.weaponLegoValue?.magazineValue;
+        reciever = player.weaponManagerValue?.weaponValue?.weaponLegoValue?.receiverValue;
 
-        scope_slot.SetItem(scope);
-        magazine_slot.SetItem(magazine);
-        reciever_slot.SetItem(reciever);
-
+        if (scope && magazine && reciever && scope_slot && magazine_slot && reciever_slot)
+        {
+            scope_slot.SetItem(scope);
+            magazine_slot.SetItem(magazine);
+            reciever_slot.SetItem(reciever);
+        }
     }
 
 

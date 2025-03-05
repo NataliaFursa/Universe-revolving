@@ -43,7 +43,9 @@ public class WeaponCageManager : MonoBehaviour
     {
         if (weapon)
         {
-            ammoText.text = $"{weapon.Ammo}/{weapon.MaxAmmo}";
+            var part = weapon.weaponLegoValue.magazineValue.part;
+            Magazine mag = part as Magazine;
+            ammoText.text = $"{weapon.Ammo}/{mag.cage}";
         }
     }
 

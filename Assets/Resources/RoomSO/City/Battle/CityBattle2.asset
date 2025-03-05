@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1973923578825356303, guid: 629d6d476ac6847f4bb4b80d27f70ee0, type: 3}
   roomName: CityBattle2
-  weight: 1
+  weight: 2

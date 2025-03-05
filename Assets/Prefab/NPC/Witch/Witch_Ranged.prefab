@@ -785,7 +785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af9019e781e98f54a9503cd47485b3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 70
 --- !u!114 &4295063109896920450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,7 +934,7 @@ MonoBehaviour:
   agentAttack: {fileID: 853657761580279912}
   projectilePrefab: {fileID: 7108841356630194522, guid: 8b3d6742b55c4423dab7bd93aa348a7e, type: 3}
   spawnBullet: {fileID: 121907900108049428}
-  shootForce: 15
+  shootForce: 30
   shootAngle: 60
 --- !u!1 &9170427068063366648
 GameObject:

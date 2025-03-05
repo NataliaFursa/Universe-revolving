@@ -54,7 +54,7 @@ public class ScreenFade : MonoBehaviour
             Color color = m_blackImage.color;
             color.a = curOpacity;
             m_blackImage.color = color;
-            Debug.Log(m_blackImage.color);
+            //Debug.Log(m_blackImage.color);
             yield return new WaitForEndOfFrame();
         }
         float fadeInStep = 1 / (float)fadeInTime;
@@ -68,7 +68,7 @@ public class ScreenFade : MonoBehaviour
             Color color = m_blackImage.color;
             color.a = curOpacity;
             m_blackImage.color = color;
-            Debug.Log(m_blackImage.color);
+            //Debug.Log(m_blackImage.color);
             yield return new WaitForEndOfFrame();
         }
         if (onFadeInEnd != null)

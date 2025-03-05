@@ -9,7 +9,7 @@ public class PartPickUpWithPrice : PartPickUpObject, IItemWithPrice
     public void UpdateData()
     {
         PickUpInformationWithPrice infoTable = GetComponent<PickUpInformationWithPrice>();
-        infoTable.SetPrice(price);
+        //infoTable.SetPrice(price);
         infoTable.RefreshInformation();
     }
 }

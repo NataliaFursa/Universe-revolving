@@ -37,7 +37,7 @@ public class Dash : MonoBehaviour
             Debug.Log("Dash on cooldown");
             return;
         }
-        m_charController.excludeLayers = LayerMask.GetMask("Projectile");
+        m_charController.excludeLayers = LayerMask.GetMask("ProjectileEnemy");
         m_dashDirection = direction;
         if (onDashStart != null)
         {
