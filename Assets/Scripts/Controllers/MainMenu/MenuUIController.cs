@@ -31,4 +31,8 @@ public class MenuUIController : MonoBehaviour
     {
         Application.Quit();
     }
+    public void LoadSceneWithIndex(int ind)
+    {
+        SceneManager.LoadScene(ind);
+    }
 }
