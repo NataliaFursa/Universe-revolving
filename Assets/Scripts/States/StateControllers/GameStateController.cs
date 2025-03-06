@@ -80,7 +80,7 @@ public class GameStateController : StateController
     public void GoToMenu()
     {
         JsonManager.SaveToJson();
-        Destroy(playerController.player);
+        Destroy(playerController.player.gameObject);
         SceneManager.LoadScene(0);
     }
 }
