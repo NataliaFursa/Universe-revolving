@@ -101,9 +101,34 @@ public class PlayerController : MonoBehaviour
         m_switchPause.started += OnPauseToogle;
         m_switchMap.Enable();
         m_switchMap.started += OnMapToogle;
-
     }
 
+    private void OnDisable()
+    {
+        m_useSkill1Action.started -= OnSkill1;
+
+        m_useSkill2Action.started -= OnSkill2;
+
+        m_extraAction.started -= OnExtraAction;
+
+        m_dashAction.started -= OnDash;
+
+
+        m_fireAction.started -= OnFireStarted;
+        m_fireAction.canceled -= OnFireEnded;
+
+
+        m_useAction.started -= OnUse;
+
+
+        m_switchInventory.started -= OnInventoryToogle;
+
+        m_switchPause.started -= OnPauseToogle;
+
+        m_switchMap.started -= OnMapToogle;
+
+
+    }
 
     void Update()
     {
@@ -156,7 +181,7 @@ public class PlayerController : MonoBehaviour
     {
         player.ExtraAction();
         onPlayerReload?.Invoke();
-    }
+   }
 
     private void OnDash(InputAction.CallbackContext context)
     {
