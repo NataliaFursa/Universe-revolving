@@ -225,8 +225,8 @@ MonoBehaviour:
   levelSize: 5
   minRoomCountPerLayer: 2
   maxRoomCountPerLayer: 4
-  fixedShopLevel: 0
-  shopSoloLayer: 0
+  fixedShopLevel: 2
+  shopSoloLayer: 1
   rewardRoomsPerLevel: 1
   shopRoomsPerLevel: 1
   restRoomsPerLevel: 1
@@ -726,6 +726,14 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 332749922}
+    - target: {fileID: 1336661963188942817, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1336661963188942817, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1938498991796240786, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.074895
@@ -781,6 +789,10 @@ PrefabInstance:
     - target: {fileID: 4128540327974825222, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
       propertyPath: m_Name
       value: GamePlayMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 6233401430094885525, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6619954583323122380, guid: 10b104215cb88b241a8b538f113d8edf, type: 3}
       propertyPath: levelController
