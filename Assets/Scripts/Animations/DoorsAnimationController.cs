@@ -18,7 +18,7 @@ public class DoorsAnimationController : MonoBehaviour
 
     public virtual void Activate()
     {
-        DoorA_animator.SetTrigger("OpenDoorA");
-        DoorB_animator.SetTrigger("OpenDoorB");
+        if (DoorA_animator != null)  DoorA_animator.SetTrigger("OpenDoorA");
+        if (DoorA_animator != null) DoorB_animator.SetTrigger("OpenDoorB");
     }
 }
