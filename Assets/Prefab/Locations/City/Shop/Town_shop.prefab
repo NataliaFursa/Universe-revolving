@@ -1463,10 +1463,10 @@ MonoBehaviour:
   partsDB: {fileID: 11400000, guid: f10da979b778e3642a2da344e24373c1, type: 2}
   healPickUp: {fileID: 2760803291180475844, guid: c17804ed5069f7544b4baf8d7718382e, type: 3}
   pickUpObject: {fileID: 2760803291180475844, guid: 17c87c88cb08c7644a28fe7143f8104e, type: 3}
-  commonBaseCost: 50
+  commonBaseCost: 100
   rareBaseCost: 250
   epicBaseCost: 500
-  legendaryBaseCost: 1000
+  legendaryBaseCost: 600
   randomPriceRange: 10
   randomPriceStep: 0
   healPrice: 150

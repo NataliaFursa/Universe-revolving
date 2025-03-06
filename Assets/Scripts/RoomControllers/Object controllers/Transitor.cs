@@ -78,9 +78,12 @@ public class Transitor : IInteractable
         {
             doorController.Activate();
         }
-        if (portalController != null)
+        else
         {
-            portalController.ActivatePortal();
+            if (portalController != null)
+            {
+                portalController.ActivatePortal();
+            }
         }
         isActive = true;
     }
