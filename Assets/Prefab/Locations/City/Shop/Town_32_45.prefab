@@ -1472,8 +1472,8 @@ MonoBehaviour:
   healPrice: 150
   commonChance: 90
   rareChance: 60
-  epicChance: 30
-  legendaryChance: 20
+  epicChance: 40
+  legendaryChance: 30
 --- !u!1 &6324678520238910140
 GameObject:
   m_ObjectHideFlags: 0

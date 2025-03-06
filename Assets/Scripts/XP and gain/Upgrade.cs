@@ -22,7 +22,7 @@ public class Upgrade : MonoBehaviour
     }
     private void MSUpgrade()
     {
-        if (Meta.baseMS < 12) Meta.baseMS += 1;
+        if (Meta.baseMS < 12) Meta.baseMS += 2;
         else return;
     }
 
@@ -41,7 +41,7 @@ public class Upgrade : MonoBehaviour
     }
     private void HPUpgrade()
     {
-        if (Meta.baseHP < 200) Meta.baseMS += 25;
+        if (Meta.baseHP < 200) Meta.baseHP += 25;
         else return;
     }
 
